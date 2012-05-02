@@ -1,0 +1,147 @@
+@import "../inconsolata/stylesheet.css";
+
+border-part(place, color, width = 1px, style = solid)
+	add-property('border-'+place+'-width', width)
+	add-property('border-'+place+'-style', style)
+	add-property('border-'+place+'-color', color)
+
+body
+	font-family "Lucida Grande"
+	background #F8F8F8
+	& > header .filename
+		padding 10px 10px 15px
+		font-size 18px
+
+ol
+	font-family 'InconsolataMedium'
+	list-style none
+	position relative
+	font-size 12px
+	color #333`
+	&:before
+		display block
+		position absolute
+		width 40px
+		height 100%
+		left 0
+		top 0
+		content " "
+	li
+		display block
+		position relative
+		margin-left 40px
+		line-height 14px
+	li:before
+		display block
+		font-size 10px
+		height 14px
+		width 25px
+		padding-right 15px
+		text-align right
+		position absolute
+		left -40px
+		top 1px
+		color #CCC
+		content counter(item) " "
+		counter-increment item
+.editor.top
+	counter-reset item
+
+.inline.editor
+	height 0
+	position relative
+	overflow hidden
+	background #EAEAEA
+	position relative
+	-webkit-transition height 0.10s ease-out
+	.relatedContainer
+		width 0
+		position absolute
+		height 100%
+		top 0
+		right 0
+		overflow hidden
+		-webkit-transition width 0.15s ease-out
+		background #F2F2F2
+		.related
+			position absolute
+			top 0
+			left 1px
+			height 100%
+			width: 250px
+			border-part('left', #CCC, 1px, solid)
+			box-shadow -1px 0 0 0 #FFF
+			font-size 12px
+			ul
+				padding 10px 15px
+				list-style none
+				color #656565
+				li
+					padding-top 5px
+				.location
+					color #ACACAC
+					font-size 12px
+		.selection
+			display block
+			width 100%
+			background #E6E6E6
+			position absolute
+			-webkit-transition height 0.10s ease-out
+			-webkit-transition top 0.10s ease-out
+			border-part(top, #D6D6D6, 1px, solid)
+			border-part(bottom, #D6D6D6, 1px, solid)
+			box-shadow 0 1px 0 #FFF
+	.shadow
+		display block
+		height 7px
+		width 100%
+		position absolute
+		content " "
+		left 0
+	.shadow.top
+		top 0
+		background-image -webkit-linear-gradient(top, rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.00))
+	.shadow.bottom
+		bottom 0
+		background-image -webkit-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.20))
+	
+	.rulesContainer
+		.location
+			font-family "Lucida Grande"
+			font-size 14px
+			color #656565
+			padding 10px
+		position: absolute
+		top 0
+		left 0
+		width 100%
+		-webkit-transition top 0.25s ease-out
+		.rule
+			padding 10px 0
+			box-shadow 0 -1px 0 #CCC, 0 1px 0 #FFF
+		ol
+			counter-reset subset 9
+			li:before
+				content counter(subset) " "
+				counter-increment subset
+			&::before
+				display block
+				position absolute
+				width 40px
+				height 100%
+				background transparent
+				left 0
+				top 0
+				content " "
+#instruction
+	position absolute
+	top 20px
+	right 20px
+	width 300px
+	background #FAF1C6
+	border 1px solid #FFE266
+	padding 0 20px
+	h2
+		margin-bottom 10px
+	ul
+		list-style none

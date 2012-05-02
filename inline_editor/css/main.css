@@ -1,0 +1,90 @@
+@import url(reset.css);
+@import url(../inconsolata/stylesheet.css);
+body {
+  font-family: 'InconsolataMedium'; }
+
+#content ol {
+  list-style: none;
+  background: #1D1D1D;
+  position: relative; }
+#content ol:before {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  background: #262626;
+  left: 0px;
+  top: 0px;
+  content: " ";
+  border-right: 1px solid #333; }
+#content li {
+  display: block;
+  position: relative;
+  margin-left: 40px;
+  line-height: 14px; }
+#content li:before {
+  display: block;
+  font-size: 10px;
+  height: 14px;
+  width: 25px;
+  padding-right: 15px;
+  text-align: right;
+  position: absolute;
+  left: -40px;
+  top: 1px;
+  color: #808080;
+  content: counter(item) " ";
+  counter-increment: item; }
+#content .editor.top {
+  counter-reset: item; }
+#content .inline.editor {
+  position: relative;
+  height: auto;
+  max-height: 0px;
+  overflow: hidden;
+  -webkit-transition: max-height 0.75s ease-in-out; }
+#content .inline.editor.open {
+  max-height: 1000px; }
+#content .inline.editor {
+  position: relative; }
+  #content .inline.editor .shadow {
+    display: block;
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    content: " ";
+    left: 0; }
+  #content .inline.editor .shadow.top {
+    top: 0px;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)); }
+  #content .inline.editor .shadow.bottom {
+    bottom: 0px;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)); }
+  #content .inline.editor .filename {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background: #FFF;
+    padding: 0px 4px 3px;
+    font-family: "Lucida Grande";
+    font-size: 12px;
+    border: solid #808080;
+    border-width: 0px 1px 1px;
+    border-bottom-right-radius: 3px 5px;
+    border-bottom-left-radius: 3px 5px; }
+  #content .inline.editor ol:before {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    left: 0px;
+    top: 0px;
+    content: " ";
+    border-right: 1px solid #808080; }
+  #content .inline.editor ol {
+    background: #E6E6E6;
+    counter-reset: subset 9; }
+    #content .inline.editor ol li:before {
+      content: counter(subset) " ";
+      counter-increment: subset; }

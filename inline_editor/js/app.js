@@ -1,0 +1,1 @@
+((function(){$(function(){return $("#toggle").click(function(){return $(".inline.editor").toggleClass("open")})})})).call(this);

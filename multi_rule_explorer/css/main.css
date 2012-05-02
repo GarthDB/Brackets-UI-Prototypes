@@ -1,0 +1,179 @@
+@import "../inconsolata/stylesheet.css";
+body {
+  font-family: "Lucida Grande";
+  background: #f8f8f8;
+}
+body > header .filename {
+  padding: 10px 10px 15px;
+  font-size: 18px;
+}
+ol {
+  font-family: 'InconsolataMedium';
+  list-style: none;
+  position: relative;
+  font-size: 12px;
+}
+ol color #333`,
+ol:before {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  content: " ";
+}
+ol li {
+  display: block;
+  position: relative;
+  margin-left: 40px;
+  line-height: 14px;
+}
+ol li:before {
+  display: block;
+  font-size: 10px;
+  height: 14px;
+  width: 25px;
+  padding-right: 15px;
+  text-align: right;
+  position: absolute;
+  left: -40px;
+  top: 1px;
+  color: #ccc;
+  content: counter(item) " ";
+  counter-increment: item;
+}
+.editor.top {
+  counter-reset: item;
+}
+.inline.editor {
+  height: 0;
+  position: relative;
+  overflow: hidden;
+  background: #eaeaea;
+  position: relative;
+  -webkit-transition: height 0.1s ease-out;
+}
+.inline.editor .relatedContainer {
+  width: 0;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  -webkit-transition: width 0.15s ease-out;
+  background: #f2f2f2;
+}
+.inline.editor .relatedContainer .related {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  height: 100%;
+  width: 250px;
+  border-left-width: 1px;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-style: solid;
+  border-left-color: #ccc;
+  border-left-color: #ccc;
+  box-shadow: -1px 0 0 0 #fff;
+  font-size: 12px;
+}
+.inline.editor .relatedContainer .related ul {
+  padding: 10px 15px;
+  list-style: none;
+  color: #656565;
+}
+.inline.editor .relatedContainer .related ul li {
+  padding-top: 5px;
+}
+.inline.editor .relatedContainer .related ul .location {
+  color: #acacac;
+  font-size: 12px;
+}
+.inline.editor .relatedContainer .selection {
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  position: absolute;
+  -webkit-transition: height 0.1s ease-out;
+  -webkit-transition: top 0.1s ease-out;
+  border-top-width: 1px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-style: solid;
+  border-top-color: #d6d6d6;
+  border-top-color: #d6d6d6;
+  border-bottom-width: 1px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-style: solid;
+  border-bottom-color: #d6d6d6;
+  border-bottom-color: #d6d6d6;
+  box-shadow: 0 1px 0 #fff;
+}
+.inline.editor .shadow {
+  display: block;
+  height: 7px;
+  width: 100%;
+  position: absolute;
+  content: " ";
+  left: 0;
+}
+.inline.editor .shadow.top {
+  top: 0;
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.20), rgba(0,0,0,0.00));
+}
+.inline.editor .shadow.bottom {
+  bottom: 0;
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.00), rgba(0,0,0,0.20));
+}
+.inline.editor .rulesContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: top 0.25s ease-out;
+}
+.inline.editor .rulesContainer .location {
+  font-family: "Lucida Grande";
+  font-size: 14px;
+  color: #656565;
+  padding: 10px;
+}
+.inline.editor .rulesContainer .rule {
+  padding: 10px 0;
+  box-shadow: 0 -1px 0 #ccc, 0 1px 0 #fff;
+}
+.inline.editor .rulesContainer ol {
+  counter-reset: subset 9;
+}
+.inline.editor .rulesContainer ol li:before {
+  content: counter(subset) " ";
+  counter-increment: subset;
+}
+.inline.editor .rulesContainer ol::before {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  background: transparent;
+  left: 0;
+  top: 0;
+  content: " ";
+}
+#instruction {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  background: #faf1c6;
+  border: 1px solid #ffe266;
+  padding: 0 20px;
+}
+#instruction h2 {
+  margin-bottom: 10px;
+}
+#instruction ul {
+  list-style: none;
+}
