@@ -1,0 +1,36 @@
+@import url('fonts/SourceSans/stylesheet.css');
+
+html, body
+	height 100%
+
+body
+	font-family 'SourceSans'
+	display -webkit-box
+	-webkit-box-orient horizontal
+
+	display box
+	box-orient horizontal
+
+@import 'components/project_panel'
+
+#content
+	background #DDD
+	-webkit-box-flex 1
+	box-flex 1
+
+	display -webkit-box
+	-webkit-box-orient vertical
+
+	display box
+	box-orient vertical
+
+	& > header
+		height 34px
+		background #FFF
+		position relative
+		h1
+			position absolute
+			width 100%
+			text-align center
+			left 0
+			top 0

@@ -1,0 +1,80 @@
+@import url("fonts/SourceSans/stylesheet.css");
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: 'SourceSans';
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  display: box;
+  box-orient: horizontal;
+}
+#project_panel {
+  width: 300px;
+  background: #3b3f41;
+  font-size: 13px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.50);
+}
+#project_panel ul {
+  list-style: none;
+}
+#project_panel li {
+  margin-left: 20px;
+}
+#project_panel li a {
+  display: block;
+  padding: 4px 0;
+}
+#project_panel header {
+  position: relative;
+  font-size: 14px;
+  color: #899395;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 16px 10px 3px;
+  margin-bottom: 4px;
+}
+#project_panel header:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.00)), to(rgba(0,0,0,0.03)));
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.00), rgba(0,0,0,0.03));
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0.00), rgba(0,0,0,0.03));
+  background-image: -o-linear-gradient(top, rgba(0,0,0,0.00), rgba(0,0,0,0.03));
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,0.00), rgba(0,0,0,0.03));
+  background-image: linear-gradient(top, rgba(0,0,0,0.00), rgba(0,0,0,0.03));
+}
+#project_panel .filename {
+  color: #e6e6e6;
+}
+#project_panel .extension {
+  color: #8e9a9d;
+}
+#project_panel .foldername {
+  color: #8e9a9d;
+}
+#content {
+  background: #ddd;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  display: box;
+  box-orient: vertical;
+}
+#content > header {
+  height: 34px;
+  background: #fff;
+  position: relative;
+}
+#content > header h1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  top: 0;
+}
