@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+}
+header {
+  text-align: center;
+  height: 60px;
+  padding-top: 20px;
+}
+header h1 {
+  font-weight: normal;
+  font-family: "comic-serif-pro-1", "comic-serif-pro-2";
+  font-size: 36px;
+}
+#content {
+  width: 400px;
+  margin: 0 auto;
+}
+#content nav ul {
+  list-style: none;
+}
+#content nav ul li {
+  margin-bottom: 10px;
+}
+#content nav ul a {
+  text-decoration: none;
+  color: #51a1b8;
+}
+#content nav ul a:hover {
+  text-decoration: underline;
+}
