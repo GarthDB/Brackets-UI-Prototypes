@@ -56,6 +56,16 @@ body {
 }
 #project_panel .foldername {
   color: #8e9a9d;
+  position: relative;
+}
+#project_panel .foldername:before {
+  content: '';
+  border-top: 7px solid #626567;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  position: absolute;
+  left: -12px;
+  top: 3px;
 }
 #content {
   background: #ddd;
