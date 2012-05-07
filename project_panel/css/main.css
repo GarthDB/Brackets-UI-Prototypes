@@ -20,7 +20,7 @@ body {
   list-style: none;
 }
 #project_panel li {
-  margin-left: 20px;
+  margin-left: 14px;
 }
 #project_panel li a {
   display: block;
@@ -61,11 +61,16 @@ body {
 #project_panel .foldername:before {
   content: '';
   border-top: 7px solid #626567;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
   position: absolute;
-  left: -12px;
+  left: -18px;
   top: 3px;
+  transform: scale(0.6, 1);
+  -webkit-transform: scale(0.6, 1);
+}
+#project_panel section.project_files > ul {
+  margin-left: 12px;
 }
 #content {
   background: #ddd;
