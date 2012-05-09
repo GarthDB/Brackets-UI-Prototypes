@@ -1,7 +1,8 @@
 header-color = #899395
-folder-color = #8E9A9D
-filename-color = #E6E6E6
+folder-color = #677375
+filename-color = #C7C7C7
 extension-color = #8E9A9D
+selected-color = #FFF
 
 #project_panel
 	width 300px
@@ -17,6 +18,9 @@ extension-color = #8E9A9D
 			display block
 			padding 4px 0
 			cursor default
+		&.selected
+			a span
+				color selected-color
 	header
 		position relative
 		font-size 14px

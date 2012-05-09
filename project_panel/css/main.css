@@ -28,6 +28,9 @@ body {
   padding: 4px 0;
   cursor: default;
 }
+#project_panel li.selected a span {
+  color: #fff;
+}
 #project_panel header {
   position: relative;
   font-size: 14px;
@@ -51,13 +54,13 @@ body {
   background-image: linear-gradient(top, rgba(0,0,0,0.00), rgba(0,0,0,0.03));
 }
 #project_panel .filename {
-  color: #e6e6e6;
+  color: #c7c7c7;
 }
 #project_panel .extension {
   color: #8e9a9d;
 }
 #project_panel .foldername {
-  color: #8e9a9d;
+  color: #677375;
   position: relative;
 }
 #project_panel .foldername:before {
