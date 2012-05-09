@@ -1,21 +1,42 @@
+@import url("fonts/stylesheet.css");
+body,
+html {
+  height: 100%;
+}
 body {
   font-family: sans-serif;
-}
-header {
-  text-align: center;
-  height: 60px;
-  padding-top: 20px;
-}
-header h1 {
-  font-weight: normal;
-  font-family: "comic-serif-pro-1", "comic-serif-pro-2";
-  font-size: 36px;
+  background: url("../img/concrete_wall_dark.png");
+  font-family: 'GTG';
 }
 #content {
-  width: 400px;
-  margin: 0 auto;
+  background: url("../img/concrete_wall_light.png");
+  height: 60%;
+  min-height: 600px;
+  position: relative;
+}
+#content header {
+  width: 870px;
+  height: 600px;
+  background: url("../img/notebook_illustration.svg") no-repeat;
+  position: absolute;
+  bottom: -63px;
+  left: 50%;
+  margin-left: -435px;
+  font-size: 24px;
+}
+#content h1 {
+  text-align: center;
+  width: 180px;
+  height: 100px;
+  position: absolute;
+  top: 430px;
+  left: 140px;
 }
 #content nav ul {
+  position: absolute;
+  left: 450px;
+  top: 275px;
+  font-size: 18px;
   list-style: none;
 }
 #content nav ul li {
@@ -23,7 +44,7 @@ header h1 {
 }
 #content nav ul a {
   text-decoration: none;
-  color: #51a1b8;
+  color: #0071bc;
 }
 #content nav ul a:hover {
   text-decoration: underline;
