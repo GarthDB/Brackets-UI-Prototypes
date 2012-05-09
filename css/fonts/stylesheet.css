@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'GTG';
+    src: url('gtg.eot');
+    src: url('gtg.eot?#iefix') format('embedded-opentype'),
+         url('gtg.woff') format('woff'),
+         url('gtg.ttf') format('truetype'),
+         url('gtg.svg#gtg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
