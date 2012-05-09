@@ -15,6 +15,7 @@ body {
   background: #3b3f41;
   font-size: 13px;
   text-shadow: 0 1px 2px rgba(0,0,0,0.50);
+  position: relative;
 }
 #project_panel ul {
   list-style: none;
@@ -25,6 +26,7 @@ body {
 #project_panel li a {
   display: block;
   padding: 4px 0;
+  cursor: default;
 }
 #project_panel header {
   position: relative;
@@ -71,6 +73,19 @@ body {
 }
 #project_panel section.project_files > ul {
   margin-left: 12px;
+}
+#project_panel > section {
+  position: relative;
+  z-index: 2;
+}
+#file_selection {
+  position: absolute;
+  width: 100%;
+  background: #373a3b;
+  height: 20px;
+  left: 0;
+  box-shadow: 0 -1px 0 #2c2e2f, 0 1px 0 #535757;
+  z-index: 1;
 }
 #content {
   background: #ddd;

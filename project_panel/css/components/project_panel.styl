@@ -8,6 +8,7 @@ extension-color = #8E9A9D
 	background #3B3F41
 	font-size 13px
 	text-shadow 0 1px 2px hsla(0, 0%, 0%, 0.5)
+	position relative
 	ul
 		list-style none
 	li
@@ -15,6 +16,7 @@ extension-color = #8E9A9D
 		a
 			display block
 			padding 4px 0
+			cursor default
 	header
 		position relative
 		font-size 14px
@@ -29,7 +31,6 @@ extension-color = #8E9A9D
 			content ''
 			left 0
 			bottom 0
-			// background-color: #ffffff;
 			background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.00)),to(rgba(0, 0, 0, 0.03)));
 			background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.03));
 			background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.03));
@@ -59,3 +60,15 @@ extension-color = #8E9A9D
 			
 	section.project_files > ul
 		margin-left 12px
+	& > section
+		position relative
+		z-index 2
+
+#file_selection
+	position absolute
+	width 100%
+	background #373A3B
+	height 20px
+	left 0
+	box-shadow 0 -1px 0 #2C2E2F, 0 1px 0 #535757
+	z-index 1
