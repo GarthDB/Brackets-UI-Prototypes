@@ -60,8 +60,11 @@ selected-color = #FFF
 			top 3px
 			transform scale(0.6,1)
 			-webkit-transform scale(0.6,1)
-		// &.collapsed
-			
+	.collapsed
+		max-height 22px
+		overflow-y hidden
+		.foldername:before
+			-webkit-transform scale(1,0.6) rotate(-90deg)
 	section.project_files > ul
 		margin-left 12px
 	& > section

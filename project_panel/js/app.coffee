@@ -10,5 +10,7 @@ $ ->
 		newSelectedElement = $(this).parent()
 		newSelectedElement.addClass('selected')
 		moveSelection(newSelectedElement)
+	$('li.folder a').click ->
+		$(this).parent().toggleClass('collapsed')
 
 

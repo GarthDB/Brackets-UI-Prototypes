@@ -74,6 +74,13 @@ body {
   transform: scale(0.6, 1);
   -webkit-transform: scale(0.6, 1);
 }
+#project_panel .collapsed {
+  max-height: 22px;
+  overflow-y: hidden;
+}
+#project_panel .collapsed .foldername:before {
+  -webkit-transform: scale(1, 0.6) rotate(-90deg);
+}
 #project_panel section.project_files > ul {
   margin-left: 12px;
 }
