@@ -1,0 +1,40 @@
+!!! 5
+html
+	head
+		meta(charset = 'utf-8')
+		meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge,chrome=1')
+		title Color Picker
+		link(rel = 'stylesheet', type = 'text/css', href = 'css/reset.css')
+		link(rel = 'stylesheet', type = 'text/css', href = 'css/main.css')
+		link(rel = 'stylesheet', type = 'text/css', href = 'css/colorpicker.css')
+		script(src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+		script(src = 'js/app.js')
+		script(src = 'js/colorpicker.js')
+		//if lt IE 9
+			script(src = '//html5shiv.googlecode.com/svn/trunk/html5.js')
+	body
+		header
+		#content
+			p#colorpickerHolder
+			.current-color
+			.coloreditor
+				.saturation-luminosity-block
+				.hue-slider
+				.opacity
+				.selected-color
+				ul.button-bar
+					li
+						a(href="#") Hex
+					li
+						a(href="#") RGB
+					li
+						a(href="#") HSL
+				ul.swatches
+					li a
+					li a
+					li a
+					li a
+					li a
+					li a
+
+		footer
