@@ -1,3 +1,49 @@
 body {
   background: #eaeaea;
 }
+.coloreditor .saturation-luminosity-block {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+.coloreditor .saturation-luminosity-block .saturation-gradient,
+.coloreditor .saturation-luminosity-block .luminosity-gradient,
+.coloreditor .saturation-luminosity-block .hue-block {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.coloreditor .saturation-luminosity-block .saturation-gradient {
+  background-image: -webkit-gradient(linear, left center, right center, from(#fff), to(rgba(255,255,255,0)));
+}
+.coloreditor .saturation-luminosity-block .luminosity-gradient {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(#000));
+}
+.coloreditor .hue-slider,
+.coloreditor .opacity-group {
+  width: 12px;
+  height: 150px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.coloreditor .hue-slider {
+  background-image: -webkit-linear-gradient(top, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+}
+.coloreditor .opacity-group {
+  position: relative;
+}
+.coloreditor .opacity-group .opacity-background,
+.coloreditor .opacity-group .opacity-slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.coloreditor .opacity-group .opacity-background {
+  background: url("../img/transparent_bg.svg");
+}

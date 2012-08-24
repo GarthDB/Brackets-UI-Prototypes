@@ -1,6 +1,6 @@
-currentColor = '#00FF00'
+currentColor = '#FF0000'
 
 $ ->
 	$('.current-color').html currentColor
-	$('#colorpickerHolder').ColorPicker({flat: true})
+	console.log Colors.ColorFromRGB(64,128,128)
 	# Stuff here

@@ -6,21 +6,22 @@ html
 		title Color Picker
 		link(rel = 'stylesheet', type = 'text/css', href = 'css/reset.css')
 		link(rel = 'stylesheet', type = 'text/css', href = 'css/main.css')
-		link(rel = 'stylesheet', type = 'text/css', href = 'css/colorpicker.css')
 		script(src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
 		script(src = 'js/app.js')
-		script(src = 'js/colorpicker.js')
 		//if lt IE 9
 			script(src = '//html5shiv.googlecode.com/svn/trunk/html5.js')
 	body
 		header
 		#content
-			p#colorpickerHolder
 			.current-color
 			.coloreditor
 				.saturation-luminosity-block
+					.saturation-gradient
+					.luminosity-gradient
 				.hue-slider
-				.opacity
+				.opacity-group
+					.opacity-background
+					.opacity-slider
 				.selected-color
 				ul.button-bar
 					li
