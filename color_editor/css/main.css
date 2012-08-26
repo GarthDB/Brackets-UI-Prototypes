@@ -1,12 +1,19 @@
 body {
   background: #eaeaea;
 }
+.coloreditor {
+  -webkit-user-select: none;
+}
 .coloreditor .saturation-luminosity-block {
   width: 150px;
   height: 150px;
   position: relative;
   display: inline-block;
   margin-right: 10px;
+  cursor: crosshair;
+  border-radius: 3px;
+  box-shadow: 0 1px 0px #fff;
+  -webkit-user-drag: element;
 }
 .coloreditor .saturation-luminosity-block .saturation-gradient,
 .coloreditor .saturation-luminosity-block .luminosity-gradient,
@@ -16,12 +23,24 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 3px;
+  pointer-events: none;
 }
 .coloreditor .saturation-luminosity-block .saturation-gradient {
   background-image: -webkit-gradient(linear, left center, right center, from(#fff), to(rgba(255,255,255,0)));
 }
 .coloreditor .saturation-luminosity-block .luminosity-gradient {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(#000));
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.4);
+}
+.coloreditor .saturation-luminosity-block .selector {
+  width: 11px;
+  height: 11px;
+  box-shadow: 0 0 0 3px #fff, 0 0 2px 3px rgba(0,0,0,0.7), inset 0 0 2px 0 #000;
+  margin: -5px -5px -6px -5px;
+  position: absolute;
+  border-radius: 5px;
+  pointer-events: none;
 }
 .coloreditor .hue-slider,
 .coloreditor .opacity-group {
@@ -29,9 +48,24 @@ body {
   height: 150px;
   display: inline-block;
   margin-right: 10px;
+  border-radius: 3px;
+  box-shadow: 0 1px 0px #fff;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.4);
+  position: relative;
+}
+.coloreditor .hue-slider .selector,
+.coloreditor .opacity-group .selector {
+  width: 12px;
+  height: 4px;
+  border: 3px solid #fff;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.7), inset 0 0 2px 0 #000;
+  position: absolute;
+  margin: -4px -3px -5px;
+  border-radius: 3px;
+  pointer-events: none;
 }
 .coloreditor .hue-slider {
-  background-image: -webkit-linear-gradient(top, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+  background-image: -webkit-linear-gradient(top, #f00, #f0f, #00f, #0ff, #0f0, #ff0, #f00);
 }
 .coloreditor .opacity-group {
   position: relative;
@@ -43,7 +77,37 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 3px;
+}
+.coloreditor .opacity-group .opacity-slider {
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.4);
 }
 .coloreditor .opacity-group .opacity-background {
   background: url("../img/transparent_bg.svg");
+}
+.coloreditor .color-indicator {
+  width: 88px;
+  height: 25px;
+  background: url("../img/transparent_bg.svg");
+  position: relative;
+  border-radius: 3px;
+}
+.coloreditor .color-indicator .selected-color,
+.coloreditor .color-indicator .original-color {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  box-shadow: 0 1px 0px #fff, inset 0 1px 1px rgba(0,0,0,0.4);
+}
+.coloreditor .color-indicator .selected-color {
+  left: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+}
+.coloreditor .color-indicator .original-color {
+  right: 0;
+  background: #00f;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
 }

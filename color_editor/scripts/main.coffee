@@ -1,6 +1,8 @@
-currentColor = '#FF0000'
+initColor = 'rgb(80, 10, 100)'
 
-$ ->
-	$('.current-color').html currentColor
-	console.log Colors.ColorFromRGB(64,128,128)
-	# Stuff here
+require ['color-editor'], (ColorEditor) ->
+	colorEditor = new ColorEditor $('.coloreditor')[0], initColor
+	
+	$ ->
+		$('#clickButton').click ->
+			colorEditor.parseColor($('#colorInput').val())

@@ -7,22 +7,30 @@ html
 		link(rel = 'stylesheet', type = 'text/css', href = 'css/reset.css')
 		link(rel = 'stylesheet', type = 'text/css', href = 'css/main.css')
 		script(src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
-		script(src = 'js/app.js')
+		script(data-main = "scripts/main", src = 'scripts/require.js')
 		//if lt IE 9
 			script(src = '//html5shiv.googlecode.com/svn/trunk/html5.js')
+		script
+
 	body
 		header
 		#content
-			.current-color
+			input#colorInput(type="text")
+			a#clickButton(href="#") select
 			.coloreditor
 				.saturation-luminosity-block
 					.saturation-gradient
 					.luminosity-gradient
+					.selector
 				.hue-slider
+					.selector
 				.opacity-group
 					.opacity-background
 					.opacity-slider
-				.selected-color
+					.selector
+				.color-indicator
+					.selected-color
+					.original-color
 				ul.button-bar
 					li
 						a(href="#") Hex
@@ -30,12 +38,3 @@ html
 						a(href="#") RGB
 					li
 						a(href="#") HSL
-				ul.swatches
-					li a
-					li a
-					li a
-					li a
-					li a
-					li a
-
-		footer
