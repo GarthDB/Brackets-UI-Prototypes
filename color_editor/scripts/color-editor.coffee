@@ -56,6 +56,7 @@ define ['helper/colors'], (colors) ->
 			$(@element).children('.hue-slider').children('.selector').css({bottom: String((@color.Hue()/360) * 100)+'%'})
 			$(@element).children('.opacity-slider').children('.selector').css({bottom: String(@color.Alpha() * 100)+'%'})
 			$(@element).children('.color-indicator').children('.selected-color').css({background: 'rgba('+@color.Red()+','+@color.Green()+','+@color.Blue()+','+@color.Alpha()+')'})
+			$('.colorLabel').html("hsla(#{Math.round(@color.Hue())}, #{Math.round(@color.Saturation()*100)}%, #{Math.round(@color.Value()*100)}%, #{Math.round(@color.Alpha() * 100)/100})")
 		satLumMousedownHandler: (e) =>
 			@color.SetHSV( @color.Hue(), e.offsetX/150, 1 - (e.offsetY/150))
 			@updateColor()

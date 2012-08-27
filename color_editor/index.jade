@@ -12,11 +12,12 @@ html
 			script(src = '//html5shiv.googlecode.com/svn/trunk/html5.js')
 		script
 
-	body
+	body(style="margin: 50px;")
 		header
 		#content
 			//- input#colorInput(type="text")
 			//- a#clickButton(href="#") select
+			.colorLabel(style="padding: 20px; -webkit-user-select: none;") hsla(360, 100, 50%, 0.5)
 			.coloreditor
 				.saturation-luminosity-block
 					.saturation-gradient
