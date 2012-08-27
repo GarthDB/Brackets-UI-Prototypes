@@ -7,8 +7,9 @@ define ['helper/colors'], (colors) ->
 			$(@element).children('.opacity-group').click @opacityClickHandler
 			$(@element).children('.saturation-luminosity-block').bind 'drag', @satLumDragHandler
 			$(@element).children('.saturation-luminosity-block').bind 'dragstart', @satLumDragstartHandler
-			$(@element).children('.saturation-luminosity-block').bind 'drop', @satLumDropHandler
-			$(@element).children('.saturation-luminosity-block').bind 'dragend', @satLumDragendHandler
+			$(@element).children('.saturation-luminosity-block').bind 'dragend', @satLumDropHandler
+			$(@element).children('.saturation-luminosity-block').bind 'mouseup', @satLumDropHandler
+			# $(@element).children('.saturation-luminosity-block').bind 'dragend', @satLumDragendHandler
 		parseColor: (color) ->
 			if color.match(/^#?([a-f0-9]{6}|[a-f0-9]{3})$/i)
 				if color.match(/^#?[a-f0-9]{3}$/i)
@@ -60,14 +61,15 @@ define ['helper/colors'], (colors) ->
 			# x = e.originalEvent.offsetX
 			# y = (y >= 150) ? 150 : (y < 0) ? 0 : y
 			# console.log y + ' = ' + x
-			# console.log e
+			console.log e
 			@color.SetHSV( @color.Hue(), x/150, 1 - (y/150))
 			@updateColor()
+			e.originalEvent.preventDefault()
 		satLumDropHandler: (e) =>
-			console.log e
-			if e.stopPropagation
-				e.stopPropagation()
-		satLumDragendHandler: (e) =>
+			@color.SetHSV( @color.Hue(), e.originalEvent.offsetX/150, 1 - (e.originalEvent.offsetY/150))
+			@updateColor()
+			
+		# satLumDragendHandler: (e) =>
 			# console.log e.originalEvent.offsetY
 			# console.log e.originalEvent.offsetX
 		satLumDragstartHandler: (e) =>
@@ -76,4 +78,5 @@ define ['helper/colors'], (colors) ->
 			dragIcon.src = '/img/transparent_bg.svg'
 			console.log $(dragIcon).css({display: 'none'})
 			e.originalEvent.dataTransfer.setDragImage(dragIcon, -10, -10)
+			e.originalEvent.dataTransfer.dropEffect = 'move'
 			console.log e.originalEvent.dataTransfer
