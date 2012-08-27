@@ -1,15 +1,25 @@
 define ['helper/colors'], (colors) ->
 	class ColorEditor
+
 		constructor: (@element, color) ->
+			@satLumBlock = $(@element).children('.saturation-luminosity-block')[0]
+			@hueSlider = $(@element).children('.hue-slider')[0]
+			@opacitySlider = $(@element).children('.opacity-slider')[0]
+			@colorIndicator = $(@element).children('.color-indicator')[0]
+			@originalColorIndicator = $(@colorIndicator).children('.original-color')[0]
+			@buttonBar = $(@element).children('.button-bar')[0]
+
 			@parseColor color
-			$(@element).children('.saturation-luminosity-block').click @satLumClickHandler
-			$(@element).children('.hue-slider').click @hueClickHandler
-			$(@element).children('.opacity-group').click @opacityClickHandler
-			$(@element).children('.saturation-luminosity-block').bind 'drag', @satLumDragHandler
-			$(@element).children('.saturation-luminosity-block').bind 'dragstart', @satLumDragstartHandler
-			$(@element).children('.saturation-luminosity-block').bind 'dragend', @satLumDropHandler
-			$(@element).children('.saturation-luminosity-block').bind 'mouseup', @satLumDropHandler
-			# $(@element).children('.saturation-luminosity-block').bind 'dragend', @satLumDragendHandler
+			@originalColor = color
+			$(@satLumBlock).mousedown @satLumMousedownHandler
+			$(@hueSlider).mousedown @hueMousedownHandler
+			$(@opacitySlider).mousedown @opacityMousedownHandler
+
+			$(@buttonBar).children('li').click @buttonbarButtonClickHandler
+
+			$(@originalColorIndicator).css({background: @originalColor})
+			$(@originalColorIndicator).click =>
+				@parseColor @originalColor
 		parseColor: (color) ->
 			if color.match(/^#?([a-f0-9]{6}|[a-f0-9]{3})$/i)
 				if color.match(/^#?[a-f0-9]{3}$/i)
@@ -41,42 +51,61 @@ define ['helper/colors'], (colors) ->
 		updateColor: () ->
 			$(@element).children('.saturation-luminosity-block').css('background', 'hsl('+@color.Hue()+', 100%, 50%)')
 			transparent = 'rgba('+@color.Red()+','+@color.Green()+','+@color.Blue()+',0)'
-			$(@element).children('.opacity-group').children('.opacity-slider').css({background: "-webkit-linear-gradient(top, "+@color.HexString()+", "+transparent+")"})
+			$(@element).children('.opacity-slider').children('.opacity-gradient').css({background: "-webkit-linear-gradient(top, "+@color.HexString()+", "+transparent+")"})
 			$(@element).children('.saturation-luminosity-block').children('.selector').css({left: String(@color.Saturation()*100)+'%', bottom: String(@color.Value()*100)+'%'})
 			$(@element).children('.hue-slider').children('.selector').css({bottom: String((@color.Hue()/360) * 100)+'%'})
-			$(@element).children('.opacity-group').children('.selector').css({bottom: String(@color.Alpha() * 100)+'%'})
+			$(@element).children('.opacity-slider').children('.selector').css({bottom: String(@color.Alpha() * 100)+'%'})
 			$(@element).children('.color-indicator').children('.selected-color').css({background: 'rgba('+@color.Red()+','+@color.Green()+','+@color.Blue()+','+@color.Alpha()+')'})
-		satLumClickHandler: (e) =>
+		satLumMousedownHandler: (e) =>
 			@color.SetHSV( @color.Hue(), e.offsetX/150, 1 - (e.offsetY/150))
 			@updateColor()
-		hueClickHandler: (e) =>
-			@color.SetHSV( (1 - e.offsetY/150) * 360, @color.Saturation(), @color.Value() )
-			@updateColor()
-		opacityClickHandler: (e) =>
-			@color.SetHSVA( @color.Hue(), @color.Saturation(), @color.Value(), (1 - e.offsetY/150) )
-			@updateColor()
-		satLumDragHandler: (e) =>
-			y = if (e.originalEvent.offsetY >= 150) then 150 else if (e.originalEvent.offsetY < 0) then 0 else e.originalEvent.offsetY
-			x = if (e.originalEvent.offsetX >= 150) then 150 else if (e.originalEvent.offsetX < 0) then 0 else e.originalEvent.offsetX
-			# x = e.originalEvent.offsetX
-			# y = (y >= 150) ? 150 : (y < 0) ? 0 : y
-			# console.log y + ' = ' + x
-			console.log e
+			$(document).bind 'mouseup', @satLumMouseupHandler
+			$(document).bind 'mousemove', @satLumMousemoveHandler
+		satLumMousemoveHandler: (e) =>
+			x = e.originalEvent.clientX - $(@satLumBlock).offset().left
+			y = e.originalEvent.clientY - $(@satLumBlock).offset().top
+			width = $(@satLumBlock).width()
+			height = $(@satLumBlock).height()
+			x = if (x >= width) then width else if (x < 0) then 0 else x
+			y = if (y >= height) then height else if (y < 0) then 0 else y
 			@color.SetHSV( @color.Hue(), x/150, 1 - (y/150))
 			@updateColor()
-			e.originalEvent.preventDefault()
-		satLumDropHandler: (e) =>
-			@color.SetHSV( @color.Hue(), e.originalEvent.offsetX/150, 1 - (e.originalEvent.offsetY/150))
+		satLumMouseupHandler: (e) =>
+			$(document).unbind 'mouseup', @satLumMouseupHandler
+			$(document).unbind 'mousemove', @satLumMousemoveHandler
+		
+		hueMousedownHandler: (e) =>
+			@color.SetHSV( (1 - e.offsetY/150) * 360, @color.Saturation(), @color.Value() )
 			@updateColor()
-			
-		# satLumDragendHandler: (e) =>
-			# console.log e.originalEvent.offsetY
-			# console.log e.originalEvent.offsetX
-		satLumDragstartHandler: (e) =>
-			# e.target.style.opacity = '1.0'
-			dragIcon = document.createElement('img')
-			dragIcon.src = '/img/transparent_bg.svg'
-			console.log $(dragIcon).css({display: 'none'})
-			e.originalEvent.dataTransfer.setDragImage(dragIcon, -10, -10)
-			e.originalEvent.dataTransfer.dropEffect = 'move'
-			console.log e.originalEvent.dataTransfer
+			$(document).bind 'mouseup', @hueMouseupHandler
+			$(document).bind 'mousemove', @hueMousemoveHandler
+		hueMousemoveHandler: (e) =>
+			y = e.originalEvent.clientY - $(@hueSlider).offset().top
+			height = $(@hueSlider).height()
+			y = if (y >= height) then height else if (y < 0) then 0 else y
+			@color.SetHSV( (1 - y/height) * 360, @color.Saturation(), @color.Value() )
+			@updateColor()
+		hueMouseupHandler: (e) =>
+			$(document).unbind 'mouseup', @hueMouseupHandler
+			$(document).unbind 'mousemove', @hueMousemoveHandler
+		
+		opacityMousedownHandler: (e) =>
+			@color.SetHSVA( @color.Hue(), @color.Saturation(), @color.Value(), (1 - e.offsetY/150) )
+			@updateColor()
+			$(document).bind 'mouseup', @opacityMouseupHandler
+			$(document).bind 'mousemove', @opacityMousemoveHandler
+		opacityMousemoveHandler: (e) =>
+			y = e.originalEvent.clientY - $(@opacitySlider).offset().top
+			height = $(@opacitySlider).height()
+			y = if (y >= height) then height else if (y < 0) then 0 else y
+			@color.SetHSVA( @color.Hue(), @color.Saturation(), @color.Value(), (1 - y/height) )
+			@updateColor()
+		opacityMouseupHandler: (e) =>
+			$(document).unbind 'mouseup', @opacityMouseupHandler
+			$(document).unbind 'mousemove', @opacityMousemoveHandler
+
+		buttonbarButtonClickHandler: (e) =>
+			console.log $(@buttonBar).children()
+
+
+
