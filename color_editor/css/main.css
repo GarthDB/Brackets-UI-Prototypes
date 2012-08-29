@@ -2,6 +2,8 @@ body {
   background: #eaeaea;
 }
 .coloreditor {
+  padding: 20px 0;
+  margin-left: 20px;
   -webkit-user-select: none;
 }
 .coloreditor .saturation-luminosity-block {
@@ -84,30 +86,49 @@ body {
 .coloreditor .opacity-slider .opacity-background {
   background: url("../img/transparent_bg.svg");
 }
-.coloreditor .color-indicator {
-  width: 88px;
+.coloreditor .lower-controls {
+  position: relative;
+}
+.coloreditor .lower-controls .button-bar {
+  position: relative;
+  top: -8px;
+}
+.coloreditor .lower-controls .color-indicator {
+  width: 74px;
   height: 25px;
   background: url("../img/transparent_bg.svg");
   position: relative;
   border-radius: 3px;
+  display: inline-block;
+  margin: 10px 10px 0 0;
 }
-.coloreditor .color-indicator .selected-color,
-.coloreditor .color-indicator .original-color {
+.coloreditor .lower-controls .color-indicator .selected-color,
+.coloreditor .lower-controls .color-indicator .original-color {
   width: 50%;
   height: 100%;
   position: absolute;
   top: 0;
   box-shadow: 0 1px 0px #fff, inset 0 1px 1px rgba(0,0,0,0.4);
 }
-.coloreditor .color-indicator .selected-color {
+.coloreditor .lower-controls .color-indicator .selected-color {
   left: 0;
   -webkit-border-top-left-radius: 3px;
   -webkit-border-bottom-left-radius: 3px;
 }
-.coloreditor .color-indicator .original-color {
+.coloreditor .lower-controls .color-indicator .original-color {
   right: 0;
   -webkit-border-top-right-radius: 3px;
   -webkit-border-bottom-right-radius: 3px;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 .button-bar {
   list-style: none;
@@ -117,11 +138,11 @@ body {
   border-radius: 3px;
   display: inline-block;
   font-weight: 400;
-  padding: 0;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 .button-bar li {
   display: inline-block;
+  margin-left: -3px;
 }
 .button-bar a {
   text-decoration: none;
@@ -146,6 +167,9 @@ body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f4f6f7));
   background-image: -webkit-linear-gradient(top, #fff, #f4f6f7);
   background-image: linear-gradient(top, #fff, #f4f6f7);
+}
+.button-bar li:first-child {
+  margin-left: 0;
 }
 .button-bar li:first-child a {
   margin-left: 0;

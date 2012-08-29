@@ -108,6 +108,11 @@ var Colors = new function()
     this.Alpha = function()
     { return alpha; }
 
+    this.SetAlpha = function (newAlpha)
+    {
+      return alpha = newAlpha;
+    }
+
     this.SetHexString = function(hexString)
     {
       if(hexString == null || typeof(hexString) != "string")

@@ -5,6 +5,8 @@ body
 	background #EAEAEA
 
 .coloreditor
+	padding 20px 0
+	margin-left 20px
 	-webkit-user-select none
 	.saturation-luminosity-block
 		width 150px
@@ -74,25 +76,32 @@ body
 			// linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
 			// background-size:60px 60px;
 			// background-position:0 0, 30px 30px
-	.color-indicator
-		width 88px
-		height 25px
-		background url(../img/transparent_bg.svg)
+	.lower-controls
 		position relative
-		border-radius corner-radius
-		.selected-color, & .original-color
-			width 50%
-			height 100%
-			position absolute
-			top 0
-			box-shadow white-shadow, dark-top-border
-		.selected-color
-			left 0
-			-webkit-border-top-left-radius corner-radius
-			-webkit-border-bottom-left-radius corner-radius
-		.original-color
-			right 0
-			-webkit-border-top-right-radius corner-radius
-			-webkit-border-bottom-right-radius corner-radius
+		.button-bar
+			position relative
+			top -8px
+		.color-indicator
+			width 74px
+			height 25px
+			background url(../img/transparent_bg.svg)
+			position relative
+			border-radius corner-radius
+			display inline-block
+			margin 10px 10px 0 0
+			.selected-color, & .original-color
+				width 50%
+				height 100%
+				position absolute
+				top 0
+				box-shadow white-shadow, dark-top-border
+			.selected-color
+				left 0
+				-webkit-border-top-left-radius corner-radius
+				-webkit-border-bottom-left-radius corner-radius
+			.original-color
+				right 0
+				-webkit-border-top-right-radius corner-radius
+				-webkit-border-bottom-right-radius corner-radius
 
 @import button-bar

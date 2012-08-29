@@ -1,3 +1,13 @@
+ul, li
+	margin 0
+	padding 0
+	border 0
+	outline 0
+	font-size 100%
+	vertical-align baseline
+	background transparent
+
+
 .button-bar
 	list-style none
 	border 1px solid rgba(0,0,0,0.3)
@@ -6,10 +16,10 @@
 	border-radius 3px
 	display inline-block
 	font-weight 400
-	padding 0
 	-webkit-font-smoothing subpixel-antialiased
 	li
 		display inline-block
+		margin-left -3px
 	a
 		text-decoration none
 		color #454545
@@ -32,14 +42,16 @@
 		background-image -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(244, 246, 247)))
 		background-image -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(244, 246, 247))
 		background-image linear-gradient(top, rgb(255, 255, 255), rgb(244, 246, 247))
-	li:first-child a
+	li:first-child
 		margin-left 0
-		-webkit-border-top-left-radius 3px
-		-webkit-border-bottom-left-radius 3px
-		-moz-border-radius-topleft 3px
-		-moz-border-radius-bottomleft 3px
-		border-top-left-radius 3px
-		border-bottom-left-radius 3px
+		a
+			margin-left 0
+			-webkit-border-top-left-radius 3px
+			-webkit-border-bottom-left-radius 3px
+			-moz-border-radius-topleft 3px
+			-moz-border-radius-bottomleft 3px
+			border-top-left-radius 3px
+			border-bottom-left-radius 3px
 	li:last-child a
 		border-right none
 		-webkit-border-top-right-radius 3px
