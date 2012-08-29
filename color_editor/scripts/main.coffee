@@ -1,4 +1,4 @@
-initColor = 'rgba(80, 10, 100, 0.5)'
+initColor = 'rgba(300, 10, 100, 0.5)'
 
 require ['color-editor'], (ColorEditor) ->
 

@@ -20,7 +20,6 @@ define ['helper/colors'], (colors) ->
 			@originalColorIndicator = $(@colorIndicator).children('.original-color')[0]
 			@buttonBar = $(@element).children('.lower-controls').children('.button-bar')[0]
 
-			@parseColor color
 			@originalColor = color
 			$(@satLumBlock).mousedown @satLumMousedownHandler
 			$(@hueSlider).mousedown @hueMousedownHandler
@@ -31,6 +30,9 @@ define ['helper/colors'], (colors) ->
 			$(@originalColorIndicator).css({background: @originalColor})
 			$(@originalColorIndicator).click =>
 				@parseColor @originalColor
+				
+			@parseColor color
+
 		parseColor: (color) ->
 			if color.match(@hexRegEx)
 				@setOutputType(@hexTypeIndex)
@@ -55,6 +57,12 @@ define ['helper/colors'], (colors) ->
 				adjustedColorAr = (@parsePercentage colorItem for colorItem in colorAr)
 				@color = Colors.ColorFromRGB adjustedColorAr[0],adjustedColorAr[1],adjustedColorAr[2]
 				if (adjustedColorAr.length > 3) then @color.SetAlpha(adjustedColorAr[3])
+			else
+				@setOutputType(@hexTypeIndex)
+				@color = Colors.ColorFromHex('#FFFFFF')
+				@originalColor = '#FFFFFF'
+				console.log @originalColor
+				$(@originalColorIndicator).css({background: '#FFFFFF'})
 			@updateColor()
 		parsePercentage: (valueString) ->
 			output
@@ -65,6 +73,8 @@ define ['helper/colors'], (colors) ->
 				output = parseFloat(valueString)
 			return output
 		updateColor: () ->
+			if @outputStringType is @hexTypeIndex
+				@color.SetAlpha(1)
 			$(@satLumBlock).css('background', 'hsl('+@color.Hue()+', 100%, 50%)')
 			transparent = 'rgba('+@color.Red()+','+@color.Green()+','+@color.Blue()+',0)'
 			$(@opacitySlider).children('.opacity-gradient').css({background: "-webkit-linear-gradient(top, "+@color.HexString()+", "+transparent+")"})
@@ -130,6 +140,8 @@ define ['helper/colors'], (colors) ->
 		opacityMousedownHandler: (e) =>
 			@color.SetHSVA( @color.Hue(), @color.Saturation(), @color.Value(), (1 - e.offsetY/150) )
 			@updateColor()
+			if @outputStringType is @hexTypeIndex
+				@setOutputType(@rgbTypeIndex)
 			$(document).bind 'mouseup', @opacityMouseupHandler
 			$(document).bind 'mousemove', @opacityMousemoveHandler
 		opacityMousemoveHandler: (e) =>
