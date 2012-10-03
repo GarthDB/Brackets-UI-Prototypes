@@ -35,6 +35,15 @@ body {
 }
 #status-bar #tab-width {
   display: inline-block;
+  margin-right: 2px;
+  cursor: pointer;
+}
+#status-bar #tab-width:hover {
+  text-decoration: underline;
+}
+#status-bar #tab-width img {
+  position: relative;
+  top: 1px;
 }
 #status-bar #tab-width-input {
   display: none;
