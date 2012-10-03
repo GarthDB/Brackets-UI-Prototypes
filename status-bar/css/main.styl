@@ -1,5 +1,6 @@
 body
 	background #F8F8F8
+	font-family 'SourceSans'
 
 #status-bar
 	height 20px
@@ -8,9 +9,15 @@ body
 	bottom 0
 	width 100%
 	-webkit-user-select none
+	color #808080
+	font-size 12px
+	font-weight normal
+	text-align right
+	box-sizing: border-box
+	padding 3px 20px 0
 	#tab-space-toggle
-		position absolute
-		right 34px
+		display inline-block
+		margin-right 4px
 		input
 			display none
 		label
@@ -21,8 +28,6 @@ body
 			&.selected
 				display inline
 	#tab-width
-		position absolute
-		right 20px
-		top 0
+		display inline-block
 	#tab-width-input
 		display none

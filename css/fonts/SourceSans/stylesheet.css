@@ -1,0 +1,39 @@
+/* SourceSansRegular */
+@font-face {
+    font-family: 'SourceSans';
+    src: url('SourceSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* SourceSansLight */
+@font-face {
+    font-family: 'SourceSans';
+    src: url('SourceSans-Light.ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* SourceSansSemibold */
+@font-face {
+    font-family: 'SourceSans';
+    src: url('SourceSans-Semibold.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* SourceSansItalic */
+@font-face {
+    font-family: 'SourceSans';
+    src: url('sourcesans-it-webfont.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* SourceCodePro Regular */
+@font-face {
+    font-family: 'SourceCodePro';
+    src: url('SourceCodePro-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
