@@ -1,0 +1,28 @@
+body
+	background #F8F8F8
+
+#status-bar
+	height 20px
+	border-top 1px solid #E6E6E6
+	position absolute
+	bottom 0
+	width 100%
+	-webkit-user-select none
+	#tab-space-toggle
+		position absolute
+		right 34px
+		input
+			display none
+		label
+			cursor pointer
+			display none
+			&:hover
+				text-decoration underline
+			&.selected
+				display inline
+	#tab-width
+		position absolute
+		right 20px
+		top 0
+	#tab-width-input
+		display none

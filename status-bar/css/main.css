@@ -1,0 +1,36 @@
+body {
+  background: #f8f8f8;
+}
+#status-bar {
+  height: 20px;
+  border-top: 1px solid #e6e6e6;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  -webkit-user-select: none;
+}
+#status-bar #tab-space-toggle {
+  position: absolute;
+  right: 34px;
+}
+#status-bar #tab-space-toggle input {
+  display: none;
+}
+#status-bar #tab-space-toggle label {
+  cursor: pointer;
+  display: none;
+}
+#status-bar #tab-space-toggle label:hover {
+  text-decoration: underline;
+}
+#status-bar #tab-space-toggle label.selected {
+  display: inline;
+}
+#status-bar #tab-width {
+  position: absolute;
+  right: 20px;
+  top: 0;
+}
+#status-bar #tab-width-input {
+  display: none;
+}
