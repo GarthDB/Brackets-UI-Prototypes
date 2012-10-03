@@ -32,11 +32,15 @@ body
 		display inline-block
 		margin-right 2px
 		cursor pointer
-		&:hover
-			// border-bottom 1px solid #808080
-			text-decoration underline
-		img
-			position relative
-			top 1px
+		.decrement
+			display inline-block
+			width 4px
+			height 8px
+			background url('../img/stepper-arrow-sprites.svg') no-repeat top left
+		.increment
+			display inline-block
+			width 4px
+			height 8px
+			background url('../img/stepper-arrow-sprites.svg') no-repeat top right
 	#tab-width-input
 		display none

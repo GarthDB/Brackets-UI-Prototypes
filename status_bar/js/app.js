@@ -2,8 +2,20 @@
 (function() {
 
   $(function() {
-    return $('#tab-space-toggle label').click(function() {
+    $('#tab-space-toggle label').click(function() {
       return $('#tab-space-toggle label').toggleClass('selected');
+    });
+    $('#tab-width .decrement').click(function() {
+      var currentValue, newValue;
+      currentValue = Number($('#tab-width label').html());
+      newValue = ((currentValue - 1) <= 1 ? 1 : currentValue - 1);
+      return $('#tab-width label').html(newValue);
+    });
+    return $('#tab-width .increment').click(function() {
+      var currentValue, newValue;
+      currentValue = Number($('#tab-width label').html());
+      newValue = currentValue + 1;
+      return $('#tab-width label').html(newValue);
     });
   });
 

@@ -38,12 +38,17 @@ body {
   margin-right: 2px;
   cursor: pointer;
 }
-#status-bar #tab-width:hover {
-  text-decoration: underline;
+#status-bar #tab-width .decrement {
+  display: inline-block;
+  width: 4px;
+  height: 8px;
+  background: url("../img/stepper-arrow-sprites.svg") no-repeat top left;
 }
-#status-bar #tab-width img {
-  position: relative;
-  top: 1px;
+#status-bar #tab-width .increment {
+  display: inline-block;
+  width: 4px;
+  height: 8px;
+  background: url("../img/stepper-arrow-sprites.svg") no-repeat top right;
 }
 #status-bar #tab-width-input {
   display: none;
