@@ -36,19 +36,21 @@ body {
 #status-bar #tab-width {
   display: inline-block;
   margin-right: 2px;
-  cursor: pointer;
 }
 #status-bar #tab-width .decrement {
   display: inline-block;
   width: 4px;
   height: 8px;
   background: url("../img/stepper-arrow-sprites.svg") no-repeat top left;
+  margin-right: 2px;
+  cursor: pointer;
 }
 #status-bar #tab-width .increment {
   display: inline-block;
   width: 4px;
   height: 8px;
   background: url("../img/stepper-arrow-sprites.svg") no-repeat top right;
+  cursor: pointer;
 }
 #status-bar #tab-width-input {
   display: none;
