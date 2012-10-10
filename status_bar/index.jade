@@ -5,7 +5,7 @@ html
 		meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge,chrome=1')
 		title Basic Starter
 		link(rel = 'stylesheet', type = 'text/css', href = 'css/reset.css')
-		link(rel='stylesheet', type='text/css', href='/Brackets-UI-Prototypes/css/fonts/SourceSans/stylesheet.css')
+		link(rel='stylesheet', type='text/css', href='../css/fonts/SourceSans/stylesheet.css')
 		link(rel = 'stylesheet', type = 'text/css', href = 'css/main.css')
 		script(src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
 		script(src = 'js/app.js')
@@ -14,13 +14,23 @@ html
 	body
 		header
 		#content
+			ul
+				li: a(href="#") No status
+				li: a(href="#") Warning
+				li: a(href="#") Error
 		#status-bar
+			#cursor-position
+				span.line Line 1
+				| ,
+				span.column Column 1
+			#line-count 37 Lines
+			#file-type css
 			#tab-space-toggle
 				input#tab-radio(type="radio", value="tab")
 				label.selected(for="tab-radio", title="Click to switch to spaces") Tab Size
 				input#space-radio(type="radio", value="space")
 				label(for="space-radio", title="Click to switch to tabs") Spaces
 			#tab-width
-				label 4
-				.decrement
-				.increment
+				label(title="Click to edit width") 4
+				input.hidden(type="number", name="quantity", min="1", max="10", maxlength="2", size="2", value="4")
+			#status

@@ -5,17 +5,18 @@
     $('#tab-space-toggle label').click(function() {
       return $('#tab-space-toggle label').toggleClass('selected');
     });
-    $('#tab-width .decrement').click(function() {
-      var currentValue, newValue;
-      currentValue = Number($('#tab-width label').html());
-      newValue = ((currentValue - 1) <= 1 ? 1 : currentValue - 1);
-      return $('#tab-width label').html(newValue);
+    $('#tab-width label').click(function() {
+      $('#tab-width > *').toggleClass('hidden');
+      return $('#tab-width input').focus();
     });
-    return $('#tab-width .increment').click(function() {
-      var currentValue, newValue;
-      currentValue = Number($('#tab-width label').html());
-      newValue = currentValue + 1;
-      return $('#tab-width label').html(newValue);
+    $('#tab-width input').blur(function() {
+      $('#tab-width > *').toggleClass('hidden');
+      return $('#tab-width label').html($('#tab-width input').val());
+    });
+    return $('#tab-width input').keyup(function() {
+      if (event.keyCode === 13) {
+        return $('#tab-width input').blur();
+      }
     });
   });
 
