@@ -16,6 +16,17 @@ body {
   box-sizing: border-box;
   padding: 3px 20px 0;
 }
+#status-bar #cursor-position {
+  position: absolute;
+  height: 100%;
+  left: 15px;
+}
+#status-bar #line-count,
+#status-bar #file-type {
+  display: inline-block;
+  text-align: right;
+  margin-right: 20px;
+}
 #status-bar #tab-space-toggle {
   display: inline-block;
   margin-right: 4px;
@@ -34,25 +45,27 @@ body {
   display: inline;
 }
 #status-bar #tab-width {
+  width: 20px;
+  text-align: left;
   display: inline-block;
 }
-#status-bar #tab-width label {
-  margin-right: 2px;
-}
-#status-bar #tab-width .decrement {
-  display: inline-block;
-  width: 6px;
-  height: 8px;
-  background: url("../img/stepper-arrow-sprites.svg") no-repeat 1px 0;
-  margin-right: 2px;
+#status-bar #tab-width label:hover {
+  text-decoration: underline;
   cursor: pointer;
 }
-#status-bar #tab-width .increment {
-  display: inline-block;
-  width: 6px;
-  height: 8px;
-  background: url("../img/stepper-arrow-sprites.svg") no-repeat -5px 0;
-  cursor: pointer;
+#status-bar #tab-width .hidden {
+  display: none;
+}
+#status-bar #tab-width input {
+  height: 12px;
+  border: 1px solid #e6e6e6;
+  margin: 0;
+  padding: 0;
+  vertical-align: center;
+  width: 28px;
+  position: relative;
+  left: 0;
+  top: -2px;
 }
 #status-bar #tab-width-input {
   display: none;

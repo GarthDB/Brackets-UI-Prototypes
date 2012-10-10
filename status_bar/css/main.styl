@@ -15,6 +15,14 @@ body
 	text-align right
 	box-sizing: border-box
 	padding 3px 20px 0
+	#cursor-position
+		position absolute
+		height 100%
+		left 15px
+	#line-count, #file-type
+		display inline-block
+		text-align right
+		margin-right 20px
 	#tab-space-toggle
 		display inline-block
 		margin-right 4px
@@ -29,21 +37,23 @@ body
 			&.selected
 				display inline
 	#tab-width
+		width 20px
+		text-align left
 		display inline-block
-		label
-			margin-right 2px
-		.decrement
-			display inline-block
-			width 6px
-			height 8px
-			background url('../img/stepper-arrow-sprites.svg') no-repeat 1px 0
-			margin-right 2px
+		label:hover
+			text-decoration underline
 			cursor pointer
-		.increment
-			display inline-block
-			width 6px
-			height 8px
-			background url('../img/stepper-arrow-sprites.svg') no-repeat -5px 0
-			cursor pointer
+		.hidden
+			display none
+		input
+			height 12px
+			border 1px solid #E6E6E6
+			margin 0
+			padding 0
+			vertical-align center
+			width 28px
+			position relative
+			left 0
+			top -2px
 	#tab-width-input
 		display none
