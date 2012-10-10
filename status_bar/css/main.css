@@ -50,6 +50,10 @@ body {
   text-align: left;
   display: inline-block;
 }
+#status-bar #tab-width label {
+  display: inline-block;
+  width: 100%;
+}
 #status-bar #tab-width label:hover {
   text-decoration: underline;
   cursor: pointer;
