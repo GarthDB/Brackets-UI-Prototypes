@@ -30,6 +30,7 @@ body {
 #status-bar #tab-space-toggle {
   display: inline-block;
   margin-right: 4px;
+  width: 42px;
 }
 #status-bar #tab-space-toggle input {
   display: none;
