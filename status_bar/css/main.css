@@ -72,6 +72,10 @@ body {
   left: 0;
   top: -2px;
 }
+#status-bar #tab-width input:focus {
+  border: 1px solid rgba(9,64,253,0.84);
+  outline: none;
+}
 #status-bar #tab-width-input {
   display: none;
 }
