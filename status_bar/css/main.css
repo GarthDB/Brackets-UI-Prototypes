@@ -63,11 +63,11 @@ body {
 }
 #status-bar #tab-width input {
   height: 12px;
+  vertical-align: -2px;
   border: 1px solid #e6e6e6;
   margin: 0;
   padding: 0;
-  vertical-align: center;
-  width: 28px;
+  width: 16px;
   position: relative;
   left: -1px;
   top: -2px;
@@ -75,6 +75,10 @@ body {
 #status-bar #tab-width input:focus {
   border: 1px solid rgba(9,64,253,0.84);
   outline: none;
+}
+#status-bar #tab-width input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 #status-bar #tab-width-input {
   display: none;
