@@ -18,8 +18,11 @@
         return $('#tab-width input').blur();
       }
     });
-    return $('#tab-width input').focus(function() {
+    $('#tab-width input').focus(function() {
       return console.log($(this).select());
+    });
+    return $('#toggleSpinner').click(function() {
+      return $('#spinner').toggleClass('spin');
     });
   });
 

@@ -17,3 +17,6 @@ $ ->
 
 	$('#tab-width input').focus ->
 		console.log $(@).select()
+
+	$('#toggleSpinner').click ->
+		$('#spinner').toggleClass('spin')
