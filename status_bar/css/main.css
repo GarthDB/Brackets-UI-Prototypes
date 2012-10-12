@@ -91,7 +91,7 @@ body {
   display: none;
 }
 #status-bar #spinner.spin {
-  -webkit-animation: rotating 1.5s linear infinite;
+  -webkit-animation: rotating 1s linear infinite;
   display: block;
 }
 #status-bar #tab-width-input {
