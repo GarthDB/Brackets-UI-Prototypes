@@ -20,3 +20,4 @@ $ ->
 
 	$('#toggleSpinner').click ->
 		$('#spinner').toggleClass('spin')
+		return false

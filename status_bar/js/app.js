@@ -22,7 +22,8 @@
       return console.log($(this).select());
     });
     return $('#toggleSpinner').click(function() {
-      return $('#spinner').toggleClass('spin');
+      $('#spinner').toggleClass('spin');
+      return false;
     });
   });
 
