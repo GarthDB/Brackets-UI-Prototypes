@@ -14,6 +14,7 @@ html
 	body
 		header
 		#content
+			a#toggleSpinner(href='#') Spin
 			ul(style="display: none;")
 				li: a(href="#") No status
 				li: a(href="#") Warning
@@ -33,4 +34,5 @@ html
 			#tab-width
 				label(title="Click to edit width") 4
 				input.hidden(type="number", name="quantity", min="1", max="10", maxlength="2", size="2", value="4")
+			#spinner
 			#status

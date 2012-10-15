@@ -13,10 +13,17 @@
       $('#tab-width > *').toggleClass('hidden');
       return $('#tab-width label').html($('#tab-width input').val());
     });
-    return $('#tab-width input').keyup(function() {
+    $('#tab-width input').keyup(function() {
       if (event.keyCode === 13) {
         return $('#tab-width input').blur();
       }
+    });
+    $('#tab-width input').focus(function() {
+      return console.log($(this).select());
+    });
+    return $('#toggleSpinner').click(function() {
+      $('#spinner').toggleClass('spin');
+      return false;
     });
   });
 

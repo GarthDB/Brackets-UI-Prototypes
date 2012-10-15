@@ -51,13 +51,43 @@ body
 			display none
 		input
 			height 12px
+			font-size 10px
+			vertical-align -2px
 			border 1px solid #E6E6E6
 			margin 0
 			padding 0
-			vertical-align center
-			width 28px
+			width 14px
 			position relative
 			left -1px
 			top -2px
+			-webkit-border-radius 2px
+			border-radius 2px
+			&:focus
+				border 1px solid rgba(9, 64,253, 0.84)
+				outline none
+			&::-webkit-inner-spin-button
+				-webkit-appearance: none
+				margin 0
+	#spinner
+		width 12px
+		height 12px
+		background url(../img/small_spinner.svg) no-repeat
+		position absolute
+		right 8px
+		top 4px
+		display none
+		&.spin
+			-webkit-animation rotating 1s linear infinite
+			display block
+
 	#tab-width-input
 		display none
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
