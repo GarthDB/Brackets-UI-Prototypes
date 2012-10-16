@@ -3,141 +3,55 @@
   <head>
     <title>Antiscroll - os x lion style cross-browser native scrolling on the web that gets out of the way</title>
     <link href="antiscroll.css" rel="stylesheet" />
-
-    <style>
-      body {
-        padding: 80px 100px;
-        font: 14px/1.4 'helvetica neue', helvetica, arial, sans-serif;
-      }
-
-      h1 {
-        font-size: 28px;
-      }
-
-      .box {
-        background: #eee;
-      }
-
-      .box, .box .antiscroll-inner {
-        width: 300px;
-        height: 99.999%;
-        font: 14px Helvetica, Arial;
-      }
-      
-      .box-wrap {
-      	position: absolute;
-      	top: 37px;
-      	left: 0;
-      	height: -webkit-calc(100% - 37px);
-      	font: 11px/16px helvetica;
-      	width: 300px;
-      }
-
-      .box-inner {
-        background: #eee;
-        padding: 10px;
-        color: #999;
-        text-shadow: 0 1px 0 #fff;
-      }
-      
-      button#removerow {
-	      position: absolute;
-	      top: 10px;
-	      right: 10px;
-      }
-      
-      button#addrow {
-	      position: absolute;
-	      top: 30px;
-	      right: 10px;
-      }
-
-    </style>
-
+    <link href="css/main.css" rel="stylesheet" />
     <script src="deps/jquery.js"></script>
     <script src="deps/jquery-mousewheel.js"></script>
     <script src="antiscroll.js"></script>
-
-    <script>
-
-      $(function () {
-      
-      var waitForFinalEvent = (function () {
-  var timers = {};
-  return function (callback, ms, uniqueId) {
-    if (!uniqueId) {
-      uniqueId = "Don't call this twice without a uniqueId";
-    }
-    if (timers[uniqueId]) {
-      clearTimeout (timers[uniqueId]);
-    }
-    timers[uniqueId] = setTimeout(callback, ms);
-  };
-})();
-      
-      
-      
-      
-        $('.box-wrap').antiscroll();
-        
-        
-        $("#removerow").click(function(){
-	        $("tr").last().remove();
-	        $('.box-wrap').antiscroll().refresh();
-        });
-        
-        $("#addrow").click(function(){
-        	$(".box-inner table").append("<tr><td>Body</td><td>Body</td><td>Body</td><td>Body</td><td>Body</td><td>Body</td><td>Body</td><td>Body</td></tr>"); 
-        	$('.box-wrap').antiscroll().refresh();
-        });
-        
-        
-        $(window).resize(function () {
-    waitForFinalEvent(function(){
-	    $('.box-wrap').antiscroll().refresh();
-      //...
-    }, 200, "some unique string");
-});
-      });
-
-    </script>
+    <script src="js/main.js"></script>
   </head>
   <body>
-  <button id="removerow">Remove Row</button>
-  <button id="addrow">Add Row</button>
-  <div class="box-wrap antiscroll-wrap">
-    <div class="box">
-      <div class="antiscroll-inner">
-        <div class="box-inner">
-          <table>
-            <tr>
-              <td>Body</td><td>Body</td><td>Body</td><td>Body</td><td>Body</td>
-              <td>Body</td><td>Body</td><td>Body</td>
-            </tr>
-            <tr>
-              <td>Body</td><td>Body</td><td>Body</td><td>Body</td><td>Body</td>
-              <td>Body</td><td>Body</td><td>Body</td>
-            </tr>
-            <tr>
-              <td>Body</td><td>Body</td><td>Body</td><td>Body</td><td>Body</td>
-              <td>Body</td><td>Body</td><td>Body</td>
-            </tr>
-            <tr>
-              <td>Body</td><td>Body</td><td>Body</td><td>Body</td><td>Body</td>
-              <td>Body</td><td>Body</td><td>Body</td>
-            </tr>
-            <tr>
-              <td>Body</td><td>Body</td><td>Body</td><td>Body</td><td>Body</td>
-              <td>Body</td><td>Body</td><td>Body</td>
-            </tr>
-            <tr>
-              <td>Body</td><td>Body</td><td>Body</td><td>Body</td><td>Body</td>
-              <td>Body</td><td>Body</td><td>Body</td>
-            </tr>
-          </table>
+  <header>
+    <button id="removerow">Remove Row</button>
+    <button id="addrow">Add Row</button>
+  </header>
+  <div id="content">
+    <div class="box-wrap antiscroll-wrap">
+      <div class="box">
+        <div class="antiscroll-inner">
+          <div class="box-inner">
+            <table>
+              <tr>
+                <td>Body</td><td>Body</td><td>Body</td><td>Body</td><td>Body</td>
+                <td>Body</td><td>Body</td><td>Body</td>
+              </tr>
+              <tr>
+                <td>Body</td><td>Body</td><td>Body</td><td>Body</td><td>Body</td>
+                <td>Body</td><td>Body</td><td>Body</td>
+              </tr>
+              <tr>
+                <td>Body</td><td>Body</td><td>Body</td><td>Body</td><td>Body</td>
+                <td>Body</td><td>Body</td><td>Body</td>
+              </tr>
+              <tr>
+                <td>Body</td><td>Body</td><td>Body</td><td>Body</td><td>Body</td>
+                <td>Body</td><td>Body</td><td>Body</td>
+              </tr>
+              <tr>
+                <td>Body</td><td>Body</td><td>Body</td><td>Body</td><td>Body</td>
+                <td>Body</td><td>Body</td><td>Body</td>
+              </tr>
+              <tr>
+                <td>Body</td><td>Body</td><td>Body</td><td>Body</td><td>Body</td>
+                <td>Body</td><td>Body</td><td>Body</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <aside></aside>
+  <footer>
+  </footer>
   </body>
 </html>

@@ -1,0 +1,77 @@
+body {
+	padding: 80px 100px;
+	font: 14px/1.4 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+h1 {
+	font-size: 28px;
+}
+
+.box {
+	background: #FFF;
+}
+
+.box, .box .antiscroll-inner {
+	width: 100%;
+	height: 99.999%;
+	font: 14px Helvetica, Arial;
+}
+
+.box-wrap {
+	position: absolute;
+	height: -webkit-calc(100% - 35px - 19px);
+	font: 11px/16px helvetica;
+	width: -webkit-calc(100% - 200px);
+}
+
+.box-inner {
+	background: #FFF;
+	padding: 10px;
+	color: #999;
+	text-shadow: 0 1px 0 #fff;
+}
+
+body > header, #content, body > aside, body > footer {
+	box-sizing: border-box;
+}
+
+body > header {
+	text-align: right;
+	background: #FFF;
+	position: absolute;
+	height: 35px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	border-bottom: 1px solid #E4E4E4;
+	display: block;
+	z-index: 1;
+}
+body > aside {
+	background: #414546;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 200px;
+	height: 100%;
+	display: block;
+	z-index: 3;
+}
+body > footer {
+	border-top: 1px solid #E4E4E4;
+	background: #FFF;
+	width: 100%;
+	height: 19px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+#content {
+	width: 100%;
+	height: 100%;
+	padding: 35px 0 19px 200px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
