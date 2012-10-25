@@ -21,8 +21,9 @@ require.config
 require ['jquery', 'mustache', 'trello', 'text!views/issue.html', 'text!views/feature.html', 'jquery.timeago'], ($, Mustache, Trello, issueTemplate, featureTemplate) ->
 	$.ajax
 		url: 'https://api.github.com/repos/adobe/brackets/issues?labels=starter+bug'
-		dataType: 'json'
+		dataType: 'jsonp'
 		success: (data) ->
+			data = data.data
 			issuesHTML = ''
 			for issue in data
 				# date = $.timeago(new Date(issue.created_at))

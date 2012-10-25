@@ -19,9 +19,10 @@
   require(['jquery', 'mustache', 'trello', 'text!views/issue.html', 'text!views/feature.html', 'jquery.timeago'], function($, Mustache, Trello, issueTemplate, featureTemplate) {
     $.ajax({
       url: 'https://api.github.com/repos/adobe/brackets/issues?labels=starter+bug',
-      dataType: 'json',
+      dataType: 'jsonp',
       success: function(data) {
         var issue, issuesHTML, _i, _len;
+        data = data.data;
         issuesHTML = '';
         for (_i = 0, _len = data.length; _i < _len; _i++) {
           issue = data[_i];
