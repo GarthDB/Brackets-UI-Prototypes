@@ -11,9 +11,10 @@ $ ->
       index = $(e.target).parent().index()
       @selectedElement = @elements[index]
       offset = $(@selectedElement).offset()
-      overlayStyles = '-webkit-box-shadow:0 0 4px #5EA7FC; width:#{$(@selectedElement).width()}px; height:#{$(@selectedElement).height()}px; position:absolute; top:#{offset.top}px; left:#{offset.left + 300}px;'
+      overlayStyles = "-webkit-box-shadow:0 0 4px 2px rgba(94,167,252, 0.5); width:#{$(@selectedElement).width() - 2}px; height:#{$(@selectedElement).height() - 2}px; position:absolute; top:#{offset.top}px; left:#{offset.left + 300}px; border: 1px solid rgba(94,167,252, 0.7);"
       overlay = "<div class='brackets-highlight' data-highlight-index='#{index}' style='#{overlayStyles}'></div>"
-      console.log $("#content").append overlay
+      $("#content").append overlay
+      console.log overlay
       return false
 
 refresh = (url) ->

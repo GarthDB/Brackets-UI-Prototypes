@@ -1,0 +1,55 @@
+!!! 5
+html
+	head
+		meta(charset = 'utf-8')
+		meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge,chrome=1')
+		title Brackets Contribute
+		link(rel = 'stylesheet', type = 'text/css', href = 'css/reset.css')
+		link(rel = 'stylesheet', type = 'text/css', href = 'css/main.css')
+		script(src="http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js")
+		script(data-main="js/app.js", src="js/require.js")
+		//if lt IE 9
+			script(src = '//html5shiv.googlecode.com/svn/trunk/html5.js')
+	body
+		header
+			h1
+				img(src="img/logo.svg", alt="Brackets Logo")
+				| Brackets
+			.hero
+				h2 Contribute!
+				img(src="img/brackets-abstract.svg", alt="Brackets")
+				section
+					h3 Let's Build Awesome, Together
+					p Brackets is an open source code editor built in HTML, CSS, and JavaScript.  It is designed from the ground up to make it easy for web developers, like you, to hack on it and to write extensions.
+					p We’ve rounded up all the information you’ll need to get started and organized it on this handy site.
+		#content
+			section#getting-started
+				h2 Getting Started
+				article.source
+					h3 Get the Source
+					p So to start, you'll need Brackets, and you can find it on Github. Take a look a the code, fork it, pull a clone, whatever you want.
+					p New to Git and Github? You can get started with github:help.
+				article.tutorials
+					h3 Tutorials
+					ul
+						li: a(href="#") How to Hack on Brackets
+						li: a(href="#") How to Write Extensions
+						li: a(href="#") Brackets Extensions
+						li: a(href="#") Simple "Hello World" extension
+					p Writing your own Brackets tutorials? Let us know.
+				article.videos
+					h3 Video Presentations
+					iframe.video(width="360", height="155", src="http://www.youtube.com/embed/xirIHMtpc4c?list=PL69EAABFC3B569526&amp;hl=en_US", frameborder="0", allowfullscreen)
+			section#get-coding
+				h2 Get Coding
+				p.description Looking for a good place to start coding?  We have a live list of starter issues and features that we think you might enjoy working on.
+				section#starter-issues(style='display:none;')
+					header
+						h3 Starter issues
+					.content
+				section#starter-features(style='display:none;')
+					header
+						h3 Starter Features
+					.content
+		footer
+			p Project source code is licensed under the <a href="https://github.com/adobe/brackets/blob/master/LICENSE">MIT License</a>.
