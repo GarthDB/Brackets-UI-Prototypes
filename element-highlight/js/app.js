@@ -22,8 +22,11 @@
         offset = $(_this.selectedElement).offset();
         overlayStyles = "outline: 4px solid rgba(94, 167, 255, 1); box-shadow: 0 0 30px #42adfc; width:" + ($(_this.selectedElement).width() - 2) + "px; height:" + ($(_this.selectedElement).height() - 2) + "px; position:absolute; top:" + offset.top + "px; left:" + (offset.left + 300) + "px;";
         overlay = "<div class='brackets-highlight' data-highlight-index='" + index + "' style='" + overlayStyles + "'></div>";
-        $("#content").append(overlay);
-        console.log(overlay);
+        if ($('#content .brackets-highlight[data-highlight-index="' + index + '"]').length > 0) {
+          $('#content .brackets-highlight[data-highlight-index="' + index + '"]').remove();
+        } else {
+          $("#content").append(overlay);
+        }
         return false;
       });
     });
