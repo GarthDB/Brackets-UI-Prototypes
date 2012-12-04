@@ -1,0 +1,10 @@
+{
+	"name": "ElementHighlighting",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"grunt": "latest",
+		"grunt-contrib": "latest",
+        "grunt-reload": "latest"
+	}
+}
