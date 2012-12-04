@@ -149,7 +149,7 @@ li.author a:before {
   top: 1px;
   left: 0;
   content: '';
-  opacity: 0.6;
+  opacity: 0.3;
 }
 #content article footer li a:hover {
   color: #333;
@@ -215,7 +215,7 @@ footer.main ol {
     top: 0;
     left: 0;
     content: '';
-    opacity: 0.2;
+    opacity: 0.3;
   }
   #content .content {
     font-weight: normal;
