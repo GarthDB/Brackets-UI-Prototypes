@@ -110,6 +110,9 @@ li.author a:before {
   font-size: 2em;
   font-weight: 600;
 }
+#content article header h2 a {
+  color: #333;
+}
 #content article p,
 #content article ul,
 #content article ol {
