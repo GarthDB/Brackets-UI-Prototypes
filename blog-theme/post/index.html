@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Brackets Team Blog</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script src="http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="site">
+      <header class="main">
+        <hgroup>
+          <h1><a href="/">Brackets</a></h1>
+          <h2>team blog</h2>
+        </hgroup>
+        <nav class="main">
+          <ul>
+            <li class="build"><a href="#">Build</a></li>
+            <li class="events"><a href="#">Events</a></li>
+            <li class="code"><a href="#">Code</a></li>
+            <li class="design"><a href="#">Design</a></li>
+            <li class="news"><a href="#">News</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div id="content">
+        <article>
+          <header>
+            <h2>Brackets Sprint 16 Build</h2>
+          </header>
+          <div class="content">
+            <p><strong>Download Sprint 17: <a href="http://github.com/adobe/brackets/downloads" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">http://github.com/adobe/brackets/downloads</a></strong></p>
+            <p>HAPPY WEB STANDARDS DAY! Today is the <a href="http://www.zeldman.com/bbd/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.zeldman.com']);">6<sup>th</sup> International Blue Beanie Day</a>, a day to celebrate and raise awareness for open web standards. To mark the occasion, we’ve created a new build of Brackets that is full of awesome. In this sprint we continued to refine and enhance the Live Development workflow. In build 17, when editing a CSS rule with Live Development, Brackets will highlight all of the HTML elements affected by that rule. We’ve also introduced a new inline visual tool for editing colors within CSS documents. The community added a couple great new features like block commenting and a new Turkish translation.</p>
+            <h2>Live CSS Highlighting</h2>
+            <p>If you’ve been following along with Brackets, you’ll know that we’ve been working to refine and enhance Live Development, not just for CSS, but also for HTML and JavaScript. One of things we’ve heard from those using Brackets day-to-day is that while Live CSS is great, it would be nice to know exactly which HTML elements will be affected by changing a CSS rule (before you change it). For that reason we’ve introduced Live Highlighting for CSS.</p>
+            <p>With Live Development enabled, when your cursor is in a CSS rule the corresponding HTML elements will be highlighted in the browser (even when using the inline CSS Quick edit). The highlight is on by default for all Live Development connections, but we made it so that you can toggle the highlighting on/off with <code>Ctrl/Cmd + Shift + C</code>. For you Chrome fans, this is the same keyboard shortcut you use to toggle “Inspect Element” mode.</p>
+            <h2>Inline Color Editor</h2>
+            <p>We’ve been saying for quite some time that the inline editor concept can go beyond go editing scenarios. A few months back we showed off an early prototype of a visual tool that helped you choose colors for HEX, RGBa and HSLa. During this sprint (and the last) we spent some time improving the code and polishing the workflow. Any time you see a color value, press Ctrl/Cmd + E to open the inline color editor. Throughout this sprint we identified <a href="https://trello.com/c/0jLlpbmk" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://trello.com']);">several enhancements for the inline color editor</a> and are hoping to work on them in Sprint 18.</p>
+            <div id="attachment_269" aligncenter style="width: 439px" class="wp-caption"><a href="http://blog.brackets.io/wp-content/uploads/2012/11/brackets-inline-color-editor.png" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://blog.brackets.io']);"><img class=" wp-image-269  " title="Brackets Color Editor" src="http://blog.brackets.io/wp-content/uploads/2012/11/brackets-inline-color-editor.png" alt="" width="429" height="358"></a><p class="wp-caption-text">Press Ctrl/Cmd + E on any color value to access the color editor.</div>
+            <h2>Community Contributions</h2>
+            <p>The community was so active this sprint that the Brackets team had a hard time keeping up (a great problem to have). Tomás Malbrán submitted a new feature that allows you to comment your code with a simple keyboard shortcut. Simply select the code you want to comment and press Ctrl/Cmd + SHIFT+ /. This works for HTML, CSS and JavaScript.</p>
+            <p>Thanks to Ilker Guller, Brackets is now available n Turkish!</p>
+            <p>Here is the full list of community contributed features and bug fixes for Sprint 17:</p>
+            <ul>
+              <li><a href="https://github.com/adobe/brackets/pull/2080" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Block comment/uncomment</a>&nbsp;(<a href="https://github.com/adobe/brackets/pull/2148" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">and</a>) by&nbsp;<a href="https://github.com/TomMalbran" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Tomás Malbrán</a></li>
+              <li><a href="https://github.com/adobe/brackets/pull/2101" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Visual cue if no quick open results</a>&nbsp;by&nbsp;<a href="https://github.com/mynetx" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">“J.M.”</a></li>
+              <li><a href="https://github.com/adobe/brackets/pull/2127" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Turkish translation</a>&nbsp;by&nbsp;<a href="https://github.com/Sly777" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Ilker Guller</a></li>
+              <li><a href="https://github.com/adobe/brackets/pull/2092" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Improve expand/collapse behavior and drag events for resizable panels</a>&nbsp;by&nbsp;<a href="https://github.com/jbalsas" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Chema Balsas</a></li>
+              <li><a href="https://github.com/adobe/brackets/pull/2132" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Fix: Undoing certain text operations takes multiple steps</a>&nbsp;by&nbsp;<a href="https://github.com/TomMalbran" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Tomás Malbrán</a></li>
+              <li><a href="https://github.com/adobe/brackets/pull/2197" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Fix #2182: HTML src/href autocomplete is stale after switching projects</a>&nbsp;by&nbsp;<a href="https://github.com/jbalsas" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Chema Balsas</a></li>
+              <li><a href="https://github.com/adobe/brackets/pull/2099" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Fix #2061: No gray JSLint star when Brackets launched with JSLint disabled</a>&nbsp;by&nbsp;<a href="https://github.com/TomMalbran" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Tomás Malbrán</a></li>
+              <li><a href="https://github.com/adobe/brackets/pull/1529" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Code cleanup of Live Preview’s injected JS code</a>&nbsp;by&nbsp;<a href="https://github.com/jdiehl" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Jonathan Diehl</a></li>
+              <li><a href="https://github.com/adobe/brackets/pull/2094" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">In-browser: Shim FileError when running in browsers that lack it</a>&nbsp;by&nbsp;<a href="https://github.com/maks" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Maksim Lin</a></li>
+              <li><a href="https://github.com/adobe/brackets/pull/2090" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Italian translation update</a>&nbsp;by&nbsp;<a href="https://github.com/antonellopasella" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Antonello Pasella</a></li>
+              <li><a href="https://github.com/adobe/brackets/pull/2111" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Spanish translation update</a>&nbsp;by&nbsp;<a href="https://github.com/jbalsas" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Chema Balsas</a></li>
+              <li><a href="https://github.com/adobe/brackets/pull/2001" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">German translation updates</a>&nbsp;(<a href="https://github.com/adobe/brackets/pull/2114" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">and</a>) by&nbsp;<a href="https://github.com/mynetx" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">“J.M.”</a></li>
+              <li><a href="https://github.com/adobe/brackets/pull/2135" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Japanese translation update</a>&nbsp;by&nbsp;<a href="https://github.com/shumpei" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Shumpei Shiraishi</a></li>
+            </ul>
+            <p>The Brackets community is <a href="http://www.urbandictionary.com/define.php?term=teh%20best%20stuffs!" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.urbandictionary.com']);">teh best stuffs</a>! Thanks for all your contributions.</p>
+            <h2>And Then…</h2>
+            <p>We took a break during Sprint 17 to define what key features are still missing from Brackets that prevent people from using it day-to-day. We have a tendency to focus on innovative features that push tooling forward before common features that everyone expects out of editor. Moving forward, we’re going to try and strike a better balance between new ideas like Live Development for HTML and common features like CSS code completion. Our goal is to make Brackets your default editor by mid-2013. Stay tuned.</p>
+            <p>-Adam</p>
+          </div>
+          <footer>
+            <ul>
+              <li class="category build"><a href="#">build</a></li>
+              <li class="publish-date"><a href="#">12 Sep 2012</a></li>
+              <li class="comment-count"><a href="#">6 Responses</a></li>
+              <li class="author"><a href="#">Adam Lehman</a></li>
+            </ul>
+          </footer>
+        </article>
+      </div>
+      <footer class="main">Project source code is licensed under the <a href="https://github.com/adobe/brackets/blob/master/LICENSE">MIT License</a>.</footer>
+    </div>
+  </body>
+</html>

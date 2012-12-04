@@ -110,7 +110,9 @@ li.author a:before {
   font-size: 2em;
   font-weight: 600;
 }
-#content article p {
+#content article p,
+#content article ul,
+#content article ol {
   margin-bottom: 16px;
 }
 #content article footer {
@@ -145,6 +147,10 @@ li.author a:before {
 footer.main {
   font-size: 0.6em;
   text-align: center;
+}
+footer.main ul,
+footer.main ol {
+  margin: 0;
 }
 @media only screen and (min-width:800px) {
   .site {
@@ -198,7 +204,13 @@ footer.main {
     content: '';
     opacity: 0.2;
   }
-  #content footer ul {
+  #content ul,
+  #content ol {
+    margin-left: 30px;
+  }
+  #content footer ul,
+  #content ol {
+    margin: 0;
     text-align: left;
   }
   #content,

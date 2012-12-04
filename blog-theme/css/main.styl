@@ -87,7 +87,7 @@ li.author a:before
 			h2
 				font-size 2em
 				font-weight 600
-		p
+		p, ul, ol
 			margin-bottom 16px
 		footer
 			border-top 1px dotted
@@ -117,6 +117,8 @@ li.author a:before
 footer.main
 	font-size 0.6em
 	text-align center
+	ul, ol
+		margin 0
 
 @media only screen and (min-width:800px)
 	.site
@@ -162,7 +164,10 @@ footer.main
 					content ''
 					opacity 0.2
 	#content
-		footer ul
+		ul, ol
+			margin-left 30px
+		footer ul, ol
+			margin 0
 			text-align left
 	#content, footer.main
 		width 530px
