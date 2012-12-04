@@ -113,9 +113,9 @@ li.author a:before {
 #content article header h2 a {
   color: #333;
 }
-#content article p,
-#content article ul,
-#content article ol {
+#content article .content p,
+#content article .content ul,
+#content article .content ol {
   margin-bottom: 16px;
 }
 #content article footer {
@@ -206,6 +206,14 @@ footer.main ol {
     left: 0;
     content: '';
     opacity: 0.2;
+  }
+  #content {
+    line-height: 1.2em;
+  }
+  #content .content {
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
   }
   #content ul,
   #content ol {
