@@ -1,6 +1,7 @@
 body
 	color #333
 	font-family source-sans-pro
+	background #EEE
 a
 	text-decoration none
 	color #1C699E
@@ -174,19 +175,50 @@ footer.main
 					content ''
 					opacity 0.3
 	#content
-		.content
-			font-weight normal
-			-webkit-font-smoothing antialiased
-			font-smoothing antialiased
-		ul, ol
-			margin-left 30px
-		footer ul, ol
-			margin 0
-			text-align left
+		article
+			.content
+				font-weight normal
+				-webkit-font-smoothing antialiased
+				font-smoothing antialiased
+			ul, ol
+				margin-left 30px
+			footer ul, ol
+				margin 0
+				text-align left
+			footer
+				border-bottom 1px dotted
+				text-align center
+				li
+					display inline-block
+					height 20px
+					padding 6px 6px 3px
+					a
+						padding-left 21px
+						position relative
+						color #666
+						font-size 0.9em
+						font-weight 300
+						&:before
+							display block
+							position absolute
+							margin 0 auto 5px
+							background-image url('assets/nav_sprites.svg')
+							background-repeat none
+							background-size 100%
+							width 16px
+							height 16px
+							top 1px
+							left 0
+							content ''
+							opacity 0.3
+						&:hover
+							color #333
+							&:before
+								opacity 1
 	#content, footer.main
 		width 530px
 		position relative
-		left 270px
+		left 260px
 	#content
 		padding-top 168px
 

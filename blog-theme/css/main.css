@@ -1,6 +1,7 @@
 body {
   color: #333;
   font-family: source-sans-pro;
+  background: #eee;
 }
 a {
   text-decoration: none;
@@ -217,25 +218,61 @@ footer.main ol {
     content: '';
     opacity: 0.3;
   }
-  #content .content {
+  #content article .content {
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
   }
-  #content ul,
-  #content ol {
+  #content article ul,
+  #content article ol {
     margin-left: 30px;
   }
-  #content footer ul,
-  #content ol {
+  #content article footer ul,
+  #content article ol {
     margin: 0;
     text-align: left;
+  }
+  #content article footer {
+    border-bottom: 1px dotted;
+    text-align: center;
+  }
+  #content article footer li {
+    display: inline-block;
+    height: 20px;
+    padding: 6px 6px 3px;
+  }
+  #content article footer li a {
+    padding-left: 21px;
+    position: relative;
+    color: #666;
+    font-size: 0.9em;
+    font-weight: 300;
+  }
+  #content article footer li a:before {
+    display: block;
+    position: absolute;
+    margin: 0 auto 5px;
+    background-image: url("assets/nav_sprites.svg");
+    background-repeat: none;
+    background-size: 100%;
+    width: 16px;
+    height: 16px;
+    top: 1px;
+    left: 0;
+    content: '';
+    opacity: 0.3;
+  }
+  #content article footer li a:hover {
+    color: #333;
+  }
+  #content article footer li a:hover:before {
+    opacity: 1;
   }
   #content,
   footer.main {
     width: 530px;
     position: relative;
-    left: 270px;
+    left: 260px;
   }
   #content {
     padding-top: 168px;
