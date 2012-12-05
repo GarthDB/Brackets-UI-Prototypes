@@ -101,8 +101,25 @@ li.comment-count a:before {
 li.author a:before {
   background-position: 0 -600%;
 }
+#content .wp-caption {
+  padding: 10px 10px 5px;
+  background: #fff;
+  display: inline-block;
+  box-shadow: inset 0 0 1px 1px #d6d6d6;
+}
+#content .wp-caption img {
+  margin: 0;
+  border: 1px solid #d6d6d6;
+  padding: 0;
+}
+#content .wp-caption .wp-caption-text {
+  font-size: 0.6em;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
 #content article {
-  margin-bottom: 40px;
+  margin-bottom: 5em;
 }
 #content article .content {
   line-height: 1.4em;
@@ -119,7 +136,8 @@ li.author a:before {
 }
 #content article .content p,
 #content article .content ul,
-#content article .content ol {
+#content article .content ol,
+#content article .content .wp-caption {
   margin-bottom: 16px;
 }
 #content article footer {
