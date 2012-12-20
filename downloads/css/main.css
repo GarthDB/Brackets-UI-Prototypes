@@ -61,7 +61,7 @@ header.main nav.site li a {
 header.main nav.site li a:hover {
   text-decoration: underline;
 }
-#content header {
+#content > header {
   position: relative;
   margin: 0 auto;
   width: 940px;
@@ -72,27 +72,37 @@ header.main nav.site li a:hover {
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.25);
 }
-#content header > img {
+#content > header > img {
   position: absolute;
   left: 6px;
   top: 17px;
 }
-#content header > h2 {
+#content > header > h2 {
   color: #fff;
   font-size: 36px;
-  font-weight: 600;
+  font-weight: 500;
   text-shadow: 0 2px 5px rgba(0,0,0,0.5);
   position: absolute;
   left: 513px;
-  top: 58px;
+  top: 38px;
 }
-#content header a.button {
+#content > header p {
+  position: absolute;
+  top: 98px;
+  left: 513px;
+  width: 394px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+}
+#content > header a.button {
   background: #2d83cb;
   border: 1px solid #01101e;
   border-radius: 8px;
   box-shadow: rgba(0,0,0,0.349) 0px 2px 5px 0px, rgba(255,255,255,0.271) 0px 2px 0px 0px inset;
   color: #fff;
-  padding: 16px 26px;
+  padding: 16px 26px 12px;
   font-size: 26px;
   font-weight: 300;
   display: inline-block;
@@ -100,14 +110,42 @@ header.main nav.site li a:hover {
   text-decoration: none;
   position: absolute;
   bottom: 30px;
-  right: 40px;
+  left: 543px;
 }
-#content header a.button span {
-  display: none;
+#content > header a.button span {
+  display: block;
+  font-size: 14px;
+  color: #b5e2fa;
 }
-#content header a.button:hover {
+#content > header a.button:hover {
   background: #3078b4;
   box-shadow: rgba(0,0,0,0.349) 0px 2px 5px 0px, rgba(0,0,0,0.1) 0px 2px 0px 0px inset;
+}
+#content > header a.other {
+  color: #b5e2fa;
+  font-size: 14px;
+  text-decoration: none;
+  position: absolute;
+  right: 80px;
+  bottom: 40px;
+  font-weight: 300;
+}
+#content > header a.other:hover {
+  text-decoration: underline;
+}
+#content > header #downloads-list {
+  display: none;
+  background: #dfe2e2;
+  position: absolute;
+  top: 260px;
+  right: 80px;
+  z-index: 50;
+  border-radius: 3px;
+  border: 1px solid #797b7b;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+}
+#content > header #downloads-list.show {
+  display: inline-block;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   #content header {
