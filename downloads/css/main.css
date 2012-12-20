@@ -1,0 +1,116 @@
+body {
+  background: #f8f8f8;
+  font-family: source-sans-pro, "Source Sans Pro", sans-serif;
+}
+header.main {
+  position: relative;
+  margin: 0 auto;
+  width: 940px;
+  height: 100px;
+}
+header.main hgroup {
+  position: absolute;
+  top: 38px;
+}
+header.main hgroup > a {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header.main hgroup > h1 {
+  font-size: 40px;
+  font-weight: 700;
+  position: absolute;
+  left: 40px;
+  top: -2px;
+}
+header.main hgroup > h1 a {
+  text-decoration: none;
+  color: #363a3a;
+}
+header.main hgroup > h2 {
+  font-size: 21px;
+  font-weight: 300;
+  position: absolute;
+  left: 40px;
+  top: 36px;
+}
+header.main nav.site {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  bottom: 30px;
+}
+header.main nav.site li {
+  display: inline-block;
+  padding: 1px 12px;
+  border-right: 1px solid #363a3a;
+}
+header.main nav.site li:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+header.main nav.site li a {
+  text-decoration: none;
+  color: #363a3a;
+  font-weight: normal;
+  font-size: 13px;
+}
+header.main nav.site li a:hover {
+  text-decoration: underline;
+}
+#content header {
+  position: relative;
+  margin: 0 auto;
+  width: 940px;
+  height: 300px;
+  background-image: url("../img/bg_gradient.png");
+  background-repeat: repeat-x;
+  background-position: top middle;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+}
+#content header > img {
+  position: absolute;
+  left: 6px;
+  top: 17px;
+}
+#content header > h2 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 600;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  position: absolute;
+  left: 513px;
+  top: 58px;
+}
+#content header a.button {
+  background: #2d83cb;
+  border: 1px solid #01101e;
+  border-radius: 8px;
+  box-shadow: rgba(0,0,0,0.349) 0px 2px 5px 0px, rgba(255,255,255,0.271) 0px 2px 0px 0px inset;
+  color: #fff;
+  padding: 16px 26px;
+  font-size: 26px;
+  font-weight: 300;
+  display: inline-block;
+  text-shadow: rgba(0,0,0,0.349) 0px 1px 2px;
+  text-decoration: none;
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+}
+#content header a.button span {
+  display: none;
+}
+#content header a.button:hover {
+  background: #3078b4;
+  box-shadow: rgba(0,0,0,0.349) 0px 2px 5px 0px, rgba(0,0,0,0.1) 0px 2px 0px 0px inset;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  #content header {
+    background-image: url("../img/bg_gradient_@2X.png");
+  }
+}

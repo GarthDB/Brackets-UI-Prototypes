@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: source-sans-pro, sans-serif;
+}
+header {
+  padding: 50px 0 60px;
+  height: 500px;
+  width: 100%;
+  background: url("../img/background.png") top center;
+  text-align: center;
+}
+header hgroup {
+  width: 454px;
+  display: block;
+  margin: 0 auto 15px;
+  position: relative;
+  padding: 10px 0 0 130px;
+}
+header hgroup .code-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+header h2 {
+  font-weight: 300;
+  font-size: 40px;
+  margin: 0 0 0;
+  text-align: left;
+}
+header h3 {
+  font-weight: 300;
+  font-size: 30px;
+  margin: -8px 0 0;
+  text-align: left;
+}
+header .sub {
+  font-size: 21px;
+  position: relative;
+  top: -40px;
+}
