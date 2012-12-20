@@ -1,13 +1,13 @@
 {{#list}}
 <section>
 	<header>
-		h3 Sprint {{sprint}}
-		h4 {{date}}
+		<h3>Sprint {{sprint}}</h3>
+		<h4>released {{date}}</h4>
 	</header>
-	<div class="content"><a href="{{&notes}}">Release Notes</a></div>
+	<div class="content"><a class="notes" href="{{&notes}}">Release Notes</a></div>
 	<ul>
-		<li><a href="{{&links.Mac}}">Mac</a></li>
-		<li><a href="{{&links.Win}}">Win</a></li>
+		<li><a href="{{&links.Mac}}">Mac Version</a></li>
+		<li><a href="{{&links.Win}}">Windows Version</a></li>
 	</ul>
 </section>
 {{/list}}

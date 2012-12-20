@@ -124,14 +124,36 @@ header.main
 		border 1px solid #797B7B
 		box-shadow 0 2px 5px rgba(0,0,0,0.25)
 		padding 10px
+		min-width 200px
 		&.show
 			display inline-block
 		a
 			color #178FCA
+			text-decoration none
+			&:hover
+				text-decoration underline
 		section
-			margin-bottom 12px
+			margin-bottom 30px
 			&:last-child
 				margin-bottom 0
+			h3
+				font-weight 500
+				font-size 21px
+				margin-bottom 2px
+			h4
+				font-weight 300
+				font-size 13px
+				margin-bottom 3px
+				margin-left 2px
+			a.notes
+				font-weight 300
+				font-size 13px
+				margin 0 0 0 20px
+			ul
+				list-style none
+				margin 5px 0 0 20px
+				a
+					font-weight 600
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
 	#content header
 		background-image url('../img/bg_gradient_@2X.png')
