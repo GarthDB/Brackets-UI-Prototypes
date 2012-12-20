@@ -15,7 +15,7 @@ require ['jquery', 'mustache', 'text!data.json', 'text!templates/download.html',
 	for build in builds.list
 		build.date = $.timeago(new Date(build.date))
 	switch $.client.os
-		when "Mac", "Windows", "Win"
+		when "Mac", "Windows"
 			download = 
 				sprint: builds.list[0].sprint
 				date: builds.list[0].date

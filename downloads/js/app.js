@@ -31,7 +31,6 @@
     switch ($.client.os) {
       case "Mac":
       case "Windows":
-      case "Win":
         download = {
           sprint: builds.list[0].sprint,
           date: builds.list[0].date,

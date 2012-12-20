@@ -66,6 +66,7 @@ header.main nav.site li a:hover {
   width: 940px;
   position: relative;
   margin: 0 auto;
+  text-align: center;
 }
 #content > header {
   position: relative;
@@ -200,13 +201,24 @@ header.main nav.site li a:hover {
   width: 800px;
   margin: 0 auto 30px;
   text-align: center;
+  line-height: 1.3em;
 }
-#content > section.system-requirements .description {
-  width: 85%;
+#content > section.system-requirements,
+#content > section.installation-instructions {
+  width: 390px;
+  display: inline-block;
+  vertical-align: top;
+}
+#content > section.system-requirements .description,
+#content > section.installation-instructions .description {
+  width: 100%;
   font-weight: normal;
   font-size: 14px;
 }
-#content > section.system-requirements .description ul {
+#content > section.system-requirements .description ul,
+#content > section.installation-instructions .description ul,
+#content > section.system-requirements .description ol,
+#content > section.installation-instructions .description ol {
   margin-left: 20px;
 }
 #content > section .description {

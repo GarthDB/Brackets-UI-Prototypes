@@ -163,16 +163,22 @@ header.main
 					margin 5px 0 0 20px
 					a
 						font-weight 600
+	text-align center
 	& > section
 		width 800px
 		margin 0 auto 30px
 		text-align center
-		&.system-requirements .description
-			width 85%
-			font-weight normal
-			font-size 14px
-			ul
-				margin-left 20px
+		line-height 1.3em
+		&.system-requirements, &.installation-instructions
+			width 390px
+			display inline-block
+			vertical-align top
+			.description
+				width 100%
+				font-weight normal
+				font-size 14px
+				ul, ol
+					margin-left 20px
 		.description
 			font-size 18px
 			font-weight 300
