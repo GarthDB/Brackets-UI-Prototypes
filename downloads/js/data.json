@@ -5,7 +5,7 @@
         "notes": "https://github.com/adobe/brackets/wiki/Release-Notes:-Sprint-18",
         "links": {
             "Mac": "http://dev.brackets.io/downloads/file.cfm?build=18&platform=OSX",
-            "Win": "http://dev.brackets.io/downloads/file.cfm?build=18&platform=WIN"
+            "Windows": "http://dev.brackets.io/downloads/file.cfm?build=18&platform=WIN"
         }
     },
     {
@@ -14,7 +14,7 @@
         "notes": "https://github.com/adobe/brackets/wiki/Release-Notes:-Sprint-17",
         "links": {
             "Mac": "http://dev.brackets.io/downloads/file.cfm?build=17&platform=OSX",
-            "Win": "http://dev.brackets.io/downloads/file.cfm?build=17&platform=WIN"
+            "Windows": "http://dev.brackets.io/downloads/file.cfm?build=17&platform=WIN"
         }
     },
     {
@@ -23,7 +23,7 @@
         "notes": "https://github.com/adobe/brackets/wiki/Release-Notes:-Sprint-16",
         "links": {
             "Mac": "http://dev.brackets.io/downloads/file.cfm?build=16&platform=OSX",
-            "Win": "http://dev.brackets.io/downloads/file.cfm?build=16&platform=WIN"
+            "Windows": "http://dev.brackets.io/downloads/file.cfm?build=16&platform=WIN"
         }
     }
 ]

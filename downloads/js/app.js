@@ -23,7 +23,6 @@
     builds = {
       list: JSON.parse(jsonData)
     };
-    alert($.client.os);
     _ref = builds.list;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       build = _ref[_i];
@@ -31,6 +30,7 @@
     }
     switch ($.client.os) {
       case "Mac":
+      case "Windows":
       case "Win":
         download = {
           sprint: builds.list[0].sprint,

@@ -12,11 +12,10 @@ require.config
 require ['jquery', 'mustache', 'text!data.json', 'text!templates/download.html', 'text!templates/build_list.html', 'jquery.timeago', 'jquery.client'], ($, Mustache, jsonData, downloadTemplate, buildListTemplate) ->
 	builds = 
 		list: JSON.parse(jsonData)
-	alert $.client.os
 	for build in builds.list
 		build.date = $.timeago(new Date(build.date))
 	switch $.client.os
-		when "Mac", "Win"
+		when "Mac", "Windows", "Win"
 			download = 
 				sprint: builds.list[0].sprint
 				date: builds.list[0].date
