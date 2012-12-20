@@ -12,6 +12,7 @@ require.config
 require ['jquery', 'mustache', 'text!data.json', 'text!templates/download.html', 'text!templates/build_list.html', 'jquery.timeago', 'jquery.client'], ($, Mustache, jsonData, downloadTemplate, buildListTemplate) ->
 	builds = 
 		list: JSON.parse(jsonData)
+	alert $.client.os
 	for build in builds.list
 		build.date = $.timeago(new Date(build.date))
 	switch $.client.os
@@ -26,7 +27,14 @@ require ['jquery', 'mustache', 'text!data.json', 'text!templates/download.html',
 			$('#content header').append(downloadsHTML)
 			buildsListHTML = Mustache.render(buildListTemplate, builds)
 			$('#downloads-list').html(buildsListHTML)
-			$('#content a.other').click ->
+			$('html').click ->
+				$('#downloads-list').removeClass('show')
+			$('#content a.other').click (event)->
 				$('#downloads-list').toggleClass('show')
+				event.stopPropagation()
+				return false
+			$('#downloads-list').click (event)->
+				event.stopPropagation()
+				return false
 		else
 			console.log 'other'

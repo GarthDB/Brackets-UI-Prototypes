@@ -143,9 +143,19 @@ header.main nav.site li a:hover {
   border-radius: 3px;
   border: 1px solid #797b7b;
   box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+  padding: 10px;
 }
 #content > header #downloads-list.show {
   display: inline-block;
+}
+#content > header #downloads-list a {
+  color: #178fca;
+}
+#content > header #downloads-list section {
+  margin-bottom: 12px;
+}
+#content > header #downloads-list section:last-child {
+  margin-bottom: 0;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   #content header {

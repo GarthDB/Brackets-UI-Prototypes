@@ -23,6 +23,7 @@
     builds = {
       list: JSON.parse(jsonData)
     };
+    alert($.client.os);
     _ref = builds.list;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       build = _ref[_i];
@@ -42,8 +43,17 @@
         $('#content header').append(downloadsHTML);
         buildsListHTML = Mustache.render(buildListTemplate, builds);
         $('#downloads-list').html(buildsListHTML);
-        return $('#content a.other').click(function() {
-          return $('#downloads-list').toggleClass('show');
+        $('html').click(function() {
+          return $('#downloads-list').removeClass('show');
+        });
+        $('#content a.other').click(function(event) {
+          $('#downloads-list').toggleClass('show');
+          event.stopPropagation();
+          return false;
+        });
+        return $('#downloads-list').click(function(event) {
+          event.stopPropagation();
+          return false;
         });
       default:
         return console.log('other');
