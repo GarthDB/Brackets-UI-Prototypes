@@ -37,7 +37,10 @@
           date: builds.list[0].date,
           notes: builds.list[0].notes,
           os: $.client.os,
-          url: builds.list[0].links[$.client.os]
+          url: builds.list[0].links[$.client.os].url,
+          filetype: builds.list[0].links[$.client.os].filetype,
+          filename: builds.list[0].links[$.client.os].filename,
+          filesize: builds.list[0].links[$.client.os].filesize
         };
         downloadsHTML = Mustache.render(downloadTemplate, download);
         $('#content header').append(downloadsHTML);

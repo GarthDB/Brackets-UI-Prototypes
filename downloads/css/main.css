@@ -1,6 +1,7 @@
 body {
   background: #f8f8f8;
   font-family: source-sans-pro, "Source Sans Pro", sans-serif;
+  color: #363a3a;
 }
 header.main {
   position: relative;
@@ -114,8 +115,8 @@ header.main nav.site li a:hover {
   text-shadow: rgba(0,0,0,0.349) 0px 1px 2px;
   text-decoration: none;
   position: absolute;
-  bottom: 30px;
-  left: 543px;
+  bottom: 40px;
+  right: 50px;
 }
 #content > header a.button span {
   display: block;
@@ -131,8 +132,8 @@ header.main nav.site li a:hover {
   font-size: 14px;
   text-decoration: none;
   position: absolute;
-  right: 80px;
-  bottom: 40px;
+  right: 65px;
+  bottom: 20px;
   font-weight: 300;
 }
 #content > header a.other:hover {
@@ -143,7 +144,7 @@ header.main nav.site li a:hover {
   background: #dfe2e2;
   position: absolute;
   top: 260px;
-  right: 80px;
+  right: 65px;
   z-index: 50;
   border-radius: 3px;
   border: 1px solid #797b7b;
@@ -160,6 +161,11 @@ header.main nav.site li a:hover {
 }
 #content > header #downloads-list a:hover {
   text-decoration: underline;
+}
+#content > header #downloads-list li span {
+  font-weight: 300;
+  font-size: 13px;
+  color: #666;
 }
 #content > header #downloads-list section {
   margin-bottom: 30px;
@@ -194,6 +200,14 @@ header.main nav.site li a:hover {
   width: 800px;
   margin: 0 auto 30px;
   text-align: center;
+}
+#content > section.system-requirements .description {
+  width: 85%;
+  font-weight: normal;
+  font-size: 14px;
+}
+#content > section.system-requirements .description ul {
+  margin-left: 20px;
 }
 #content > section .description {
   font-size: 18px;
