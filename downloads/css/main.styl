@@ -50,110 +50,141 @@ header.main
 				&:hover
 					text-decoration underline
 
-#content > header
+#content
+	width 940px
 	position relative
 	margin 0 auto
-	width 940px
-	height 300px
-	background-image url('../img/bg_gradient.png')
-	background-repeat repeat-x
-	background-position top middle
-	border-radius 2px
-	box-shadow 0 2px 5px rgba(0,0,0,0.25)
-	& > img
-		position absolute
-		left 6px
-		top 17px
-	& > h2
-		color #FFF
-		font-size 36px
-		font-weight 500
-		text-shadow 0 2px 5px rgba(0,0,0,0.5)
-		position absolute
-		left 513px
-		top 38px
-	p
-		position absolute
-		top 98px
-		left 513px
-		width 394px
-		color #FFF
-		font-size 18px
-		font-weight 300
-		line-height 22px
-	a.button
-		background #2D83CB
-		border 1px solid #01101E
-		border-radius 8px
-		box-shadow rgba(0, 0, 0, 0.34902) 0px 2px 5px 0px, rgba(255, 255, 255, 0.270588) 0px 2px 0px 0px inset
-		color #FFF
-		padding 16px 26px 12px
-		font-size 26px
-		font-weight 300
-		display inline-block
-		text-shadow rgba(0, 0, 0, 0.34902) 0px 1px 2px
-		text-decoration none
-		position absolute
-		bottom 30px
-		left 543px
-		span
-			display block
-			font-size 14px
-			color #b5e2fa
-		&:hover
-			background #3078b4
-			box-shadow rgba(0, 0, 0, 0.34902) 0px 2px 5px 0px, rgba(0, 0, 0, 0.1) 0px 2px 0px 0px inset
-	a.other
-		color #b5e2fa
-		font-size 14px
-		text-decoration none
-		position absolute
-		right 80px
-		bottom 40px
-		font-weight 300
-		&:hover
-			text-decoration underline
-	#downloads-list
-		display none
-		background #DFE2E2
-		position absolute
-		top 260px
-		right 80px
-		z-index 50
-		border-radius 3px
-		border 1px solid #797B7B
+	& > header
+		position relative
+		margin-bottom 100px
+		width 100%
+		height 300px
+		background-image url('../img/bg_gradient.png')
+		background-repeat repeat-x
+		background-position top middle
+		border-radius 2px
 		box-shadow 0 2px 5px rgba(0,0,0,0.25)
-		padding 10px
-		min-width 200px
-		&.show
+		& > img
+			position absolute
+			left 6px
+			top 17px
+		& > h2
+			color #FFF
+			font-size 36px
+			font-weight 500
+			text-shadow 0 2px 5px rgba(0,0,0,0.5)
+			position absolute
+			left 513px
+			top 38px
+		p
+			position absolute
+			top 98px
+			left 513px
+			width 394px
+			color #FFF
+			font-size 18px
+			font-weight 300
+			line-height 22px
+		a.button
+			background #2D83CB
+			border 1px solid #01101E
+			border-radius 8px
+			box-shadow rgba(0, 0, 0, 0.34902) 0px 2px 5px 0px, rgba(255, 255, 255, 0.270588) 0px 2px 0px 0px inset
+			color #FFF
+			padding 16px 26px 12px
+			font-size 26px
+			font-weight 300
 			display inline-block
-		a
-			color #178FCA
+			text-shadow rgba(0, 0, 0, 0.34902) 0px 1px 2px
 			text-decoration none
+			position absolute
+			bottom 30px
+			left 543px
+			span
+				display block
+				font-size 14px
+				color #b5e2fa
+			&:hover
+				background #3078b4
+				box-shadow rgba(0, 0, 0, 0.34902) 0px 2px 5px 0px, rgba(0, 0, 0, 0.1) 0px 2px 0px 0px inset
+		a.other
+			color #b5e2fa
+			font-size 14px
+			text-decoration none
+			position absolute
+			right 80px
+			bottom 40px
+			font-weight 300
 			&:hover
 				text-decoration underline
-		section
-			margin-bottom 30px
-			&:last-child
-				margin-bottom 0
+		#downloads-list
+			display none
+			background #DFE2E2
+			position absolute
+			top 260px
+			right 80px
+			z-index 50
+			border-radius 3px
+			border 1px solid #797B7B
+			box-shadow 0 2px 5px rgba(0,0,0,0.25)
+			padding 10px
+			min-width 200px
+			&.show
+				display inline-block
+			a
+				color #178FCA
+				text-decoration none
+				&:hover
+					text-decoration underline
+			section
+				margin-bottom 30px
+				&:last-child
+					margin-bottom 0
+				h3
+					font-weight 500
+					font-size 21px
+					margin-bottom 2px
+				h4
+					font-weight 300
+					font-size 13px
+					margin-bottom 3px
+					margin-left 2px
+				a.notes
+					font-weight 300
+					font-size 13px
+					margin 0 0 0 20px
+				ul
+					list-style none
+					margin 5px 0 0 20px
+					a
+						font-weight 600
+	& > section
+		width 800px
+		margin 0 auto 30px
+		text-align center
+		.description
+			font-size 18px
+			font-weight 300
+			display inline-block
+			vertical-align middle
+			width 25%
+			padding 40px
+			text-align left
 			h3
-				font-weight 500
 				font-size 21px
-				margin-bottom 2px
-			h4
-				font-weight 300
-				font-size 13px
-				margin-bottom 3px
-				margin-left 2px
-			a.notes
-				font-weight 300
-				font-size 13px
-				margin 0 0 0 20px
-			ul
-				list-style none
-				margin 5px 0 0 20px
-				a
-					font-weight 600
+				font-weight 500
+				margin-bottom 10px
+			p
+				margin-left 1px
+		& > a
+			display inline-block
+			vertical-align middle
+footer.main
+	width 530px
+	position relative
+	margin 30px auto
+	font-size 0.6em
+	text-align center
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-	#content header
+	#content > header
 		background-image url('../img/bg_gradient_@2X.png')
