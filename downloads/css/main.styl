@@ -50,7 +50,7 @@ header.main
 				&:hover
 					text-decoration underline
 
-#content header
+#content > header
 	position relative
 	margin 0 auto
 	width 940px
@@ -67,18 +67,27 @@ header.main
 	& > h2
 		color #FFF
 		font-size 36px
-		font-weight 600
+		font-weight 500
 		text-shadow 0 2px 5px rgba(0,0,0,0.5)
 		position absolute
 		left 513px
-		top 58px
+		top 38px
+	p
+		position absolute
+		top 98px
+		left 513px
+		width 394px
+		color #FFF
+		font-size 18px
+		font-weight 300
+		line-height 22px
 	a.button
 		background #2D83CB
 		border 1px solid #01101E
 		border-radius 8px
 		box-shadow rgba(0, 0, 0, 0.34902) 0px 2px 5px 0px, rgba(255, 255, 255, 0.270588) 0px 2px 0px 0px inset
 		color #FFF
-		padding 16px 26px
+		padding 16px 26px 12px
 		font-size 26px
 		font-weight 300
 		display inline-block
@@ -86,13 +95,36 @@ header.main
 		text-decoration none
 		position absolute
 		bottom 30px
-		right 40px
+		left 543px
 		span
-			display none
+			display block
+			font-size 14px
+			color #b5e2fa
 		&:hover
 			background #3078b4
 			box-shadow rgba(0, 0, 0, 0.34902) 0px 2px 5px 0px, rgba(0, 0, 0, 0.1) 0px 2px 0px 0px inset
-
+	a.other
+		color #b5e2fa
+		font-size 14px
+		text-decoration none
+		position absolute
+		right 80px
+		bottom 40px
+		font-weight 300
+		&:hover
+			text-decoration underline
+	#downloads-list
+		display none
+		background #DFE2E2
+		position absolute
+		top 260px
+		right 80px
+		z-index 50
+		border-radius 3px
+		border 1px solid #797B7B
+		box-shadow 0 2px 5px rgba(0,0,0,0.25)
+		&.show
+			display inline-block
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
 	#content header
 		background-image url('../img/bg_gradient_@2X.png')
