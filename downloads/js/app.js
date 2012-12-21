@@ -59,7 +59,6 @@
       case "Windows":
       case "Win":
         os = "Windows";
-        alert(os);
         download = {
           sprint: builds.list[0].sprint,
           date: builds.list[0].date,
@@ -73,7 +72,9 @@
         downloadsHTML = Mustache.render(downloadTemplate, download);
         $('#content header').append(downloadsHTML);
         buildsListHTML = Mustache.render(buildListTemplate, builds);
-        return $('#downloads-list').html(buildsListHTML);
+        $('#downloads-list').html(buildsListHTML);
+        $('#content > header > img').src;
+        return $('#content > header > img').attr('src', 'img/sprint_17_screenshot_win_@2X.png');
       default:
         return console.log('other');
     }

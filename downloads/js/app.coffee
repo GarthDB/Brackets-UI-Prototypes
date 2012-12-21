@@ -38,9 +38,9 @@ require ['jquery', 'mustache', 'text!data.json', 'text!templates/download.html',
 			$('#content header').append(downloadsHTML)
 			buildsListHTML = Mustache.render(buildListTemplate, builds)
 			$('#downloads-list').html(buildsListHTML)
+
 		when "Windows", "Win"
 			os = "Windows"
-			alert(os)
 			download = 
 				sprint: builds.list[0].sprint
 				date: builds.list[0].date
@@ -54,5 +54,7 @@ require ['jquery', 'mustache', 'text!data.json', 'text!templates/download.html',
 			$('#content header').append(downloadsHTML)
 			buildsListHTML = Mustache.render(buildListTemplate, builds)
 			$('#downloads-list').html(buildsListHTML)
+			$('#content > header > img').src
+			$('#content > header > img').attr('src', 'img/sprint_17_screenshot_win_@2X.png')
 		else
 			console.log 'other'
