@@ -19,8 +19,19 @@
   });
 
   require(['jquery', 'mustache', 'text!data.json', 'text!templates/download.html', 'text!templates/build_list.html', 'jquery.timeago', 'jquery.client'], function($, Mustache, jsonData, downloadTemplate, buildListTemplate) {
-    var build, builds, buildsListHTML, download, downloadsHTML, _i, _len, _ref;
-    alert($.client.os);
+    var build, builds, buildsListHTML, download, downloadsHTML, os, _i, _len, _ref;
+    $('html').click(function() {
+      return $('#downloads-list').removeClass('show');
+    });
+    $('#content a.other').click(function(event) {
+      $('#downloads-list').toggleClass('show');
+      event.stopPropagation();
+      return false;
+    });
+    $('#downloads-list').click(function(event) {
+      event.stopPropagation();
+      return false;
+    });
     builds = {
       list: JSON.parse(jsonData)
     };
@@ -31,7 +42,6 @@
     }
     switch ($.client.os) {
       case "Mac":
-      case "Windows":
         download = {
           sprint: builds.list[0].sprint,
           date: builds.list[0].date,
@@ -45,19 +55,25 @@
         downloadsHTML = Mustache.render(downloadTemplate, download);
         $('#content header').append(downloadsHTML);
         buildsListHTML = Mustache.render(buildListTemplate, builds);
-        $('#downloads-list').html(buildsListHTML);
-        $('html').click(function() {
-          return $('#downloads-list').removeClass('show');
-        });
-        $('#content a.other').click(function(event) {
-          $('#downloads-list').toggleClass('show');
-          event.stopPropagation();
-          return false;
-        });
-        return $('#downloads-list').click(function(event) {
-          event.stopPropagation();
-          return false;
-        });
+        return $('#downloads-list').html(buildsListHTML);
+      case "Windows":
+      case "Win":
+        os = "Windows";
+        alert(os);
+        download = {
+          sprint: builds.list[0].sprint,
+          date: builds.list[0].date,
+          notes: builds.list[0].notes,
+          os: $.client.os,
+          url: builds.list[0].links[os].url,
+          filetype: builds.list[0].links[os].filetype,
+          filename: builds.list[0].links[os].filename,
+          filesize: builds.list[0].links[os].filesize
+        };
+        downloadsHTML = Mustache.render(downloadTemplate, download);
+        $('#content header').append(downloadsHTML);
+        buildsListHTML = Mustache.render(buildListTemplate, builds);
+        return $('#downloads-list').html(buildsListHTML);
       default:
         return console.log('other');
     }
