@@ -9,7 +9,7 @@ require.config
 		"jquery.popover":
 			"deps": ["jquery"]
 
-require ['jquery', 'mustache', 'text!data.json', 'text!templates/download.html', 'text!templates/build_list.html', 'jquery.timeago', 'jquery.client'], ($, Mustache, jsonData, downloadTemplate, buildListTemplate) ->
+require ['jquery', 'mustache', 'text!data.json', 'text!templates/download.html', 'text!templates/build_list.html', 'text!templates/not_supported.html', 'jquery.timeago', 'jquery.client'], ($, Mustache, jsonData, downloadTemplate, buildListTemplate, notSupportedTemplate) ->
 	$('html').click ->
 		$('#downloads-list').removeClass('show')
 	$('#content a.other').click (event)->
@@ -38,7 +38,6 @@ require ['jquery', 'mustache', 'text!data.json', 'text!templates/download.html',
 			$('#content header').append(downloadsHTML)
 			buildsListHTML = Mustache.render(buildListTemplate, builds)
 			$('#downloads-list').html(buildsListHTML)
-
 		when "Windows", "Win"
 			os = "Windows"
 			download = 
@@ -54,7 +53,9 @@ require ['jquery', 'mustache', 'text!data.json', 'text!templates/download.html',
 			$('#content header').append(downloadsHTML)
 			buildsListHTML = Mustache.render(buildListTemplate, builds)
 			$('#downloads-list').html(buildsListHTML)
-			$('#content > header > img').src
 			$('#content > header > img').attr('src', 'img/sprint_17_screenshot_win_@2X.png')
 		else
-			console.log 'other'
+			$('#content header').append(notSupportedTemplate)
+			buildsListHTML = Mustache.render(buildListTemplate, builds)
+			$('#downloads-list').html(buildsListHTML)
+			$('#downloads-list').addClass('show')

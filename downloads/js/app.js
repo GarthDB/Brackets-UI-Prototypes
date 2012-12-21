@@ -18,7 +18,7 @@
     }
   });
 
-  require(['jquery', 'mustache', 'text!data.json', 'text!templates/download.html', 'text!templates/build_list.html', 'jquery.timeago', 'jquery.client'], function($, Mustache, jsonData, downloadTemplate, buildListTemplate) {
+  require(['jquery', 'mustache', 'text!data.json', 'text!templates/download.html', 'text!templates/build_list.html', 'text!templates/not_supported.html', 'jquery.timeago', 'jquery.client'], function($, Mustache, jsonData, downloadTemplate, buildListTemplate, notSupportedTemplate) {
     var build, builds, buildsListHTML, download, downloadsHTML, os, _i, _len, _ref;
     $('html').click(function() {
       return $('#downloads-list').removeClass('show');
@@ -73,10 +73,12 @@
         $('#content header').append(downloadsHTML);
         buildsListHTML = Mustache.render(buildListTemplate, builds);
         $('#downloads-list').html(buildsListHTML);
-        $('#content > header > img').src;
         return $('#content > header > img').attr('src', 'img/sprint_17_screenshot_win_@2X.png');
       default:
-        return console.log('other');
+        $('#content header').append(notSupportedTemplate);
+        buildsListHTML = Mustache.render(buildListTemplate, builds);
+        $('#downloads-list').html(buildsListHTML);
+        return $('#downloads-list').addClass('show');
     }
   });
 

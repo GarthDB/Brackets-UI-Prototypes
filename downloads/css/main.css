@@ -78,6 +78,7 @@ header.main nav.site li a:hover {
   background-position: top middle;
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+  text-align: left;
 }
 #content > header > img {
   position: absolute;
@@ -245,6 +246,24 @@ header.main nav.site li a:hover {
 #content > section > a {
   display: inline-block;
   vertical-align: middle;
+}
+#content > header #not-supported {
+  position: absolute;
+  display: inline-block;
+  right: 40px;
+  bottom: 30px;
+}
+#content > header #not-supported h2 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 18px;
+}
+#content > header #not-supported p {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  max-width: 250px;
 }
 footer.main {
   width: 530px;
