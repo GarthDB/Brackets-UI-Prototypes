@@ -20,6 +20,7 @@
 
   require(['jquery', 'mustache', 'text!data.json', 'text!templates/download.html', 'text!templates/build_list.html', 'jquery.timeago', 'jquery.client'], function($, Mustache, jsonData, downloadTemplate, buildListTemplate) {
     var build, builds, buildsListHTML, download, downloadsHTML, _i, _len, _ref;
+    alert($.client.os);
     builds = {
       list: JSON.parse(jsonData)
     };

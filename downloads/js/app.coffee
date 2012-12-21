@@ -10,6 +10,7 @@ require.config
 			"deps": ["jquery"]
 
 require ['jquery', 'mustache', 'text!data.json', 'text!templates/download.html', 'text!templates/build_list.html', 'jquery.timeago', 'jquery.client'], ($, Mustache, jsonData, downloadTemplate, buildListTemplate) ->
+	alert $.client.os
 	builds = 
 		list: JSON.parse(jsonData)
 	for build in builds.list
