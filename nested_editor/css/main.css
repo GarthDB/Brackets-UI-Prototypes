@@ -1,0 +1,33 @@
+html,
+body {
+  height: 100%;
+}
+#project-panel {
+  background: url("../img/propertiespanel_back@2x.png") repeat-x top #3c3f41;
+  width: 200px;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+#content {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 20px 20px 200px;
+  background: #f8f8f8;
+  position: absolute;
+  z-index: 1;
+}
+#toolbar {
+  width: 20px;
+  height: 100%;
+  box-sizing: border-box;
+  background: #5d5f60;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}

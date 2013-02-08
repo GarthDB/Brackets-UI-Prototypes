@@ -1,0 +1,31 @@
+!!! 5
+html
+	head
+		meta(charset = 'utf-8')
+		meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge,chrome=1')
+		title Nested Editor Design Spec
+		link(rel = 'stylesheet', type = 'text/css', href = 'css/reset.css')
+		link(rel = 'stylesheet', type = 'text/css', href = 'css/main.css')
+		script(src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+		script(src = 'js/app.js')
+		//if lt IE 9
+			script(src = '//html5shiv.googlecode.com/svn/trunk/html5.js')
+	body
+		#project-panel
+			nav#working-files: ul
+				li: a index.html
+				li: a main.css
+			nav#project-files: ul
+				li.file: a index.html
+				li.directory
+					a css
+					ul
+						li.file: a main.css
+				li.directory
+					a js
+					ul
+						li.file: a app.js
+		#content
+			#editor
+			#status-bar
+		#toolbar
