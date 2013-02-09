@@ -35,9 +35,34 @@
       </nav>
     </div>
     <div id="content">
-      <div id="editor"></div>
-      <div id="status-bar"></div>
+      <div class="inline-editor">
+        <header>main.css</header>
+        <div class="codeblock">
+          <pre class="line-numbers">21
+22</pre>
+          <pre class="code">body {
+	background: #1e5799;</pre>
+        </div>
+        <div class="nested-editor"></div>
+        <div class="codeblock">
+          <pre class="line-numbers">23
+24
+25</pre>
+          <pre class="code">	margin: 32px auto;
+	width: 960px;
+}</pre>
+        </div>
+      </div>
     </div>
     <div id="toolbar"></div>
+    <div id="status-bar">
+      <div id="cursor-position">Line 1, Column 1</div>
+      <div class="right">
+        <div id="line-count">138 Lines</div>
+        <div id="mode"><a href="#">HTML</a></div>
+        <div id="indent-type"><a href="#">Tab Size</a></div>
+        <div id="indent-size"><a href="#">4</a></div>
+      </div>
+    </div>
   </body>
 </html>

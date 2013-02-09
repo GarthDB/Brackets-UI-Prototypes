@@ -26,6 +26,30 @@ html
 					ul
 						li.file: a app.js
 		#content
-			#editor
-			#status-bar
+			.inline-editor
+				header main.css
+				.codeblock
+					pre.line-numbers
+						| 21
+						| 22
+					pre.code
+						| body {
+						|	background: #1e5799;
+				.nested-editor
+				.codeblock
+					pre.line-numbers
+						| 23
+						| 24
+						| 25
+					pre.code
+						| 	margin: 32px auto;
+						| 	width: 960px;
+						| }
 		#toolbar
+		#status-bar
+			#cursor-position Line 1, Column 1
+			.right
+				#line-count 138 Lines
+				#mode: a(href="#") HTML
+				#indent-type: a(href="#") Tab Size
+				#indent-size: a(href="#") 4

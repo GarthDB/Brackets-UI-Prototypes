@@ -1,24 +1,30 @@
+project-panel-width = 200px
+toolbar-width = 30px
+status-bar-height = 25px
+@import "../../css/fonts/SourceSans/stylesheet.css"
 html, body
 	height 100%
+	font-family 'SourceSans'
+	-webkit-font-smoothing antialiased
 #project-panel
 	background url('../img/propertiespanel_back@2x.png') repeat-x top #3C3F41
-	width 200px
+	width project-panel-width
 	height 100%
 	box-sizing border-box
 	position absolute
 	top 0
 	left 0
-	z-index 2
+	z-index 3
 #content
 	width 100%
 	height 100%
 	box-sizing border-box
-	padding 0 20px 20px 200px
+	padding 0 toolbar-width status-bar-height project-panel-width
 	background #F8F8F8
 	position absolute
 	z-index 1
 #toolbar
-	width 20px
+	width toolbar-width
 	height 100%
 	box-sizing border-box
 	background #5D5F60
@@ -26,3 +32,57 @@ html, body
 	right 0
 	top 0
 	z-index 2
+#status-bar
+	font-size 12px
+	color #808080
+	width 100%
+	height status-bar-height
+	position absolute
+	bottom 0
+	left 0
+	background #FFF
+	border-top 1px solid #ebebeb
+	box-sizing border-box
+	padding 0 0 0 project-panel-width
+	z-index 2 
+	#cursor-position, & .right > div
+		box-sizing border-box
+		display inline-block
+		height 100%
+	.right
+		display inline-block
+		float right
+		& a
+			text-decoration none
+			color #808080
+			&:hover
+				text-decoration underline
+#line-count, #mode, #indent-type
+	border-right 1px solid #ebebeb
+	margin-right -2px
+#cursor-position, #line-count, #mode a, #indent-type a, #indent-size a
+	padding 6px 9px
+	box-sizing border-box
+	display inline-block
+#mode a, #indent-type a
+	position relative
+	padding-right 19px
+	&:after
+		content ''
+		width 5px
+		height 100%
+		background url('../img/arrows.svg') no-repeat
+		background-position center left
+		position absolute
+		right 9px
+		top 0
+		margin-top -1px
+	&:hover
+		&:after
+			background-position center right
+#indent-size
+	width toolbar-width
+	padding-left 0
+	padding-right 0
+	border 0
+	text-align center
