@@ -35,23 +35,306 @@
       </nav>
     </div>
     <div id="content">
+      <div class="codeblock">
+        <pre class="line-numbers">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre>
+        <pre class="code">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ 
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+        &lt;title&gt;GETTING STARTED WITH BRACKETS&lt;/title&gt;
+        &lt;meta name=&quot;description&quot; content=&quot;An interactive getting started guide for Brackets.&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;</pre>
+      </div>
       <div class="inline-editor">
         <header>main.css</header>
         <div class="codeblock">
           <pre class="line-numbers">21
 22</pre>
           <pre class="code">body {
-	background: #1e5799;</pre>
+    background: #1e5799;</pre>
         </div>
-        <div class="nested-editor"></div>
+        <div class="nested-editor">
+          <div class="coloreditor"></div>
+        </div>
         <div class="codeblock">
           <pre class="line-numbers">23
 24
 25</pre>
-          <pre class="code">	margin: 32px auto;
-	width: 960px;
+          <pre class="code">    margin: 32px auto;
+    width: 960px;
 }</pre>
         </div>
+      </div>
+      <div class="codeblock">
+        <pre class="line-numbers">12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139</pre>
+        <pre class="code">&lt;h1&gt;GETTING STARTED WITH BRACKETS&lt;/h1&gt;
+&lt;h2&gt;This is your guide!&lt;/h2&gt;
+ 
+&lt;!--
+    MADE WITH &lt;3 AND JAVASCRIPT
+--&gt;
+ 
+&lt;p&gt;
+    Welcome to a super early preview of Brackets, a new open-source editor for the next generation of
+    the web. We’re big fans of standards and want to build better tooling for JavaScript, HTML and CSS 
+    and related open web technologies. This is our humble beginning.
+&lt;/p&gt;
+ 
+&lt;!--
+    WHAT IS BRACKETS?
+--&gt;
+&lt;p&gt;
+    &lt;em&gt;You are looking at an early build of Brackets.&lt;/em&gt;
+    In many ways, Brackets is a different type of editor. One notable difference is that this editor
+    is written in JavaScript. So while Brackets might not be ready for your day-to-day use quite yet,
+    we are using it every day to build Brackets.
+&lt;/p&gt;
+ 
+ 
+&lt;h2&gt;We're trying out a few new things&lt;/h2&gt;
+ 
+&lt;!--
+    THE RELATIONSHIP BETWEEN HTML, CSS AND JAVASCRIPT
+--&gt;
+&lt;h3&gt;Quick Edit for CSS and JavaScript&lt;/h3&gt;
+&lt;p&gt;
+    When editing HTML, use the &lt;kbd&gt;Cmd/Ctrl + E&lt;/kbd&gt; shortcut to open a quick inline editor that
+    displays all the related CSS. Make a tweak to your CSS, hit &lt;kbd&gt;ESC&lt;/kbd&gt; and you’re back to
+    editing HTML. Or just leave the CSS rules open and they’ll become part of your HTML editor.
+    If you hit &lt;kbd&gt;ESC&lt;/kbd&gt; outside of a quick editor, they’ll all collapse. No more switching between
+    documents and losing your context.
+&lt;/p&gt;
+ 
+&lt;samp&gt;
+    Want to see it in action? Place your cursor on the &lt;!-- &lt;samp&gt; --&gt; tag above and press
+    &lt;kbd&gt;Cmd/Ctrl + E&lt;/kbd&gt;. You should see a CSS quick editor appear above. On the right you will see
+    a list of the CSS rules that are related to this tag. Simply scroll the rules with 
+    &lt;kbd&gt;Alt + Up/Down&lt;/kbd&gt; to find the one you want to edit.
+&lt;/samp&gt;
+ 
+&lt;a href=&quot;screenshots/brackets-quick-edit.png&quot;&gt;
+    &lt;img alt=&quot;A screenshot showing CSS Quick Edit&quot; src=&quot;screenshots/brackets-quick-edit.png&quot; /&gt;
+&lt;/a&gt;
+ 
+&lt;!--
+    LIVE PREVIEW
+--&gt;
+&lt;h3&gt;Preview CSS changes live in the browser&lt;/h3&gt;
+&lt;p&gt;
+    You know that &quot;save/reload dance&quot; we've been doing for years? The one where you make changes in
+    your editor, hit save, switch to the browser and then refresh to finally see the result?
+    With Brackets, you don't have to do that dance.
+&lt;/p&gt;
+&lt;p&gt;
+    Brackets will open a &lt;em&gt;live connection&lt;/em&gt; to your local browser and push CSS updates as you
+    type! You might already be doing something like this today with browser-based tools, but with Brackets
+    there is no need to copy and paste the final CSS back into the editor. Your code runs in the
+    browser, but lives in your editor!
+&lt;/p&gt;
+ 
+&lt;samp&gt;
+    If you have Google Chrome installed, you can try this out yourself. Click on the lightning bolt 
+    icon in the top right or hit &lt;kbd&gt;Cmd/Ctrl + Alt + P&lt;/kbd&gt;. When Live Preview is enabled on 
+    an HTML document, all linked CSS documents can be edited in real-time. The icon will change from 
+    gray to gold when Brackets establishes a connection to your browser.
+    
+    Now, place your cursor on the &lt;!-- &lt;img&gt; --&gt; tag above and use &lt;kbd&gt;Cmd/Ctrl + E&lt;/kbd&gt; to open up the
+    defined CSS rules. Try changing the size of the border from 1px to 10px or change the background
+    color from &quot;dimgray&quot; to &quot;hotpink&quot;. If you have Brackets and your browser running side-by-side, you
+    will see your changes instantly reflected in your browser. Cool, right?
+&lt;/samp&gt;
+        
+&lt;p class=&quot;note&quot;&gt;
+    Today, Brackets only supports Live Preview for CSS. We are currently working on Live Preview support
+    for HTML and JavaScript. In the current version, you won't see changes to your HTML file until you save
+    the document. Live previews are only possible with Google Chrome. We want to bring this functionality
+    to all major browsers, and we're looking forward to working with those vendors.
+&lt;/p&gt;
+ 
+&lt;!--
+    LET US KNOW WHAT YOU THINK
+--&gt;
+&lt;h2&gt;Get Involved&lt;/h2&gt;
+&lt;p&gt;
+    Brackets is an open-source project. Web developers from around the world are contributing to build 
+    a better code editor. Let us know what you think, share your ideas or contribute directly to the 
+    project.
+&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;http://brackets.io&quot;&gt;Brackets.io&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://blog.brackets.io&quot;&gt;Brackets Team Blog&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://github.com/adobe/brackets&quot;&gt;Brackets on GitHub&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://github.com/adobe/brackets/wiki&quot;&gt;Brackets Wiki&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://groups.google.com/group/brackets-dev&quot;&gt;Brackets Developer Mailing List&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://twitter.com/#!/brackets&quot;&gt;@Brackets on Twitter&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Chat with Brackets developers on IRC in #brackets on Freenode&lt;/li&gt;
+&lt;/ul&gt;
+ 
+    &lt;/body&gt;
+&lt;/html&gt;
+&lt;!--
+ 
+    [[[[[[[[[[[[[[[     ]]]]]]]]]]]]]]]
+    [::::::::::::::     ::::::::::::::]
+    [::::::::::::::     ::::::::::::::]
+    [::::::[[[[[[[:     :]]]]]]]::::::]
+    [:::::[                     ]:::::]
+    [:::::[                     ]:::::]
+    [:::::[                     ]:::::]
+    [:::::[                     ]:::::]
+    [:::::[    CODE THE WEB     ]:::::]
+    [:::::[  http://brackets.io ]:::::]
+    [:::::[                     ]:::::]
+    [:::::[                     ]:::::]
+    [:::::[                     ]:::::]
+    [:::::[                     ]:::::]
+    [::::::[[[[[[[:     :]]]]]]]::::::]
+    [::::::::::::::     ::::::::::::::]
+    [::::::::::::::     ::::::::::::::]
+    [[[[[[[[[[[[[[[     ]]]]]]]]]]]]]]]
+ 
+--&gt;</pre>
       </div>
     </div>
     <div id="toolbar"></div>

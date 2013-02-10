@@ -1,9 +1,13 @@
 @import "../../css/fonts/SourceSans/stylesheet.css";
+@import "../../css/fonts/SourceCodePro/stylesheet.css";
 html,
 body {
   height: 100%;
   font-family: 'SourceSans';
   -webkit-font-smoothing: antialiased;
+}
+pre {
+  font-family: 'SourceCodePro';
 }
 #project-panel {
   background: url("../img/propertiespanel_back@2x.png") repeat-x top #3c3f41;
@@ -14,6 +18,10 @@ body {
   top: 0;
   left: 0;
   z-index: 3;
+  overflow: auto;
+  color: #bbb;
+  padding: 10px;
+  font-size: 13px;
 }
 #content {
   width: 100%;
@@ -23,13 +31,21 @@ body {
   background: #f8f8f8;
   position: absolute;
   z-index: 1;
+  overflow: scroll;
 }
 #content .inline-editor {
   width: 100%;
   background: #eaeaea;
   position: relative;
   box-sizing: border-box;
-  padding: 16px 10px;
+  padding: 16px 0;
+}
+#content .inline-editor header {
+  padding: 0 10px;
+  width: 100%;
+  color: #a1a3a4;
+  font-size: 13px;
+  margin-bottom: 10px;
 }
 #content .inline-editor:before,
 #content .inline-editor:after {
@@ -38,7 +54,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 16px;
+  height: 12px;
   display: block;
   background: -webkit-linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 20%);
 }
@@ -46,6 +62,33 @@ body {
   top: auto;
   bottom: 0;
   background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 20%);
+}
+#content .nested-editor {
+  min-height: 80px;
+  width: 100%;
+  box-shadow: 0 -1px 0 #fff, 0 -2px 0 #ccc, 0 1px 0 #ccc, 0 2px 0 #fff;
+  margin: 7px 0;
+  box-sizing: border-box;
+  padding: 0 18px;
+}
+#content .codeblock {
+  padding: 0 10px;
+  width: 100%;
+  position: relative;
+}
+#content .codeblock pre {
+  font-size: 12px;
+  line-height: 16px;
+  display: inline-block;
+}
+#content .codeblock pre.line-numbers {
+  min-width: 17px;
+  color: #acacac;
+  text-align: right;
+}
+#content .codeblock pre.code {
+  color: #444;
+  margin-left: 10px;
 }
 #toolbar {
   width: 30px;
@@ -130,4 +173,9 @@ body {
   padding-right: 0;
   border: 0;
   text-align: center;
+}
+.coloreditor {
+  width: 420px;
+  height: 214px;
+  background: -webkit-image-set(url("../img/color_editor.png") 1x, url("../img/color_editor@2X.png") 2x);
 }
