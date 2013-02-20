@@ -64,7 +64,7 @@ body > header li:nth-child(2) a:before {
 }
 body > header li:nth-child(2).selected a:before {
   background-position: 0 0;
-  background-image: url("../img/cordova_icons.png");
+  background-image: url("../img/cordova_icon.png");
   background-size: 100% 100%;
 }
 body > header li:nth-child(3) a:before {

@@ -2,6 +2,9 @@
 (function() {
 
   $(function() {
+    var image;
+    image = new Image();
+    image.src = 'img/cordova_icon.png';
     return $('body > header nav a').click(function(e) {
       $('body > header nav li').removeClass('selected');
       return $($(e.target).parent()).addClass('selected');
