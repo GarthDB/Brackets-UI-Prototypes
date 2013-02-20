@@ -1,0 +1,54 @@
+body, html
+	height 100%
+body
+	font-family: source-sans-pro, sans-serif;
+body > header
+	padding-top 20px
+	height 280px
+	background #232B3D
+	text-align center
+	position fixed
+	width 100%
+	z-index 20
+	img
+		margin-bottom 60px
+	ul
+		list-style none
+	li
+		display inline-block
+		width 120px
+		height 80px
+		a
+			font-size 12px
+			text-decoration none
+			color #A8A9AD
+			display block
+			width 100%
+			height 20px
+			padding-top 60px
+			&:hover
+				color #FFF
+		&.selected a
+			color #FFF
+			cursor default
+#content
+	height 100%
+	& > section
+		height 100%
+		box-sizing border-box
+		padding-top 300px
+		width 800px
+		position relative
+		margin 0 auto
+body > footer
+	height 28px
+	width 100%
+	padding-top 12px
+	position fixed
+	bottom 0
+	background #232b3d
+	text-align center
+	a
+		color #7495c0
+		font-size 18px
+		text-decoration none

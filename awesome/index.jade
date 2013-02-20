@@ -1,0 +1,64 @@
+!!! 5
+html
+	head
+		meta(charset = 'utf-8')
+		meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge,chrome=1')
+		title Make the Web Awesome
+		script(src="http://use.edgefonts.net/source-sans-pro:n4,n6,n7.js")
+		link(rel = 'stylesheet', type = 'text/css', href = 'css/reset.css')
+		link(rel = 'stylesheet', type = 'text/css', href = 'css/main.css')
+		script(src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+		script(src = 'js/app.js')
+		//if lt IE 9
+			script(src = '//html5shiv.googlecode.com/svn/trunk/html5.js')
+	body
+		header
+			img(href="/img/make_the_web_awesome.svg", width="120", height="120", alt="Make the Web Awesome")
+			nav: ul
+				li.brackets.selected: a(href="#brackets") Brackets
+				li.cordova: a(href="#cordova") Cordova
+				li.web_platform: a(href="#web_platform") Web Platform
+				li.test_the_web_forward: a(href="#test_the_web_forward") Test the Web Forward
+				li.topcoat: a(href="#topcoat") Topcoat
+		#content
+			section#brackets
+				aside
+					img.logo(href="img/brackets_logo.svg", alt="logo")
+				article
+					header
+						h1 Brackets
+						ul
+							li: a(href="http://www.twitter.com/brackets")
+							li: a(href="http://www.brackets.io")
+					.description An open source web editor built in html, css, and javascript.
+					.contribute
+						h2 How to contribute
+						p Checkout the <a href="http://www.brackets.io/contribute">contribute page</a> for a list of <a href="#">issues</a> and <a href="#">veatures</a> to get started with.
+			section#cordova
+				aside
+					img.logo(href="img/brackets_logo.svg", alt="logo")
+				article
+					header
+						h1 Brackets
+						ul
+							li: a(href="http://www.twitter.com/brackets")
+							li: a(href="http://www.brackets.io")
+					.description An open source web editor built in html, css, and javascript.
+					.contribute
+						h2 How to contribute
+						p Checkout the <a href="http://www.brackets.io/contribute">contribute page</a> for a list of <a href="#">issues</a> and <a href="#">veatures</a> to get started with.
+			section#web_platform
+				aside
+					img.logo(href="img/brackets_logo.svg", alt="logo")
+				article
+					header
+						h1 Brackets
+						ul
+							li: a(href="http://www.twitter.com/brackets")
+							li: a(href="http://www.brackets.io")
+					.description An open source web editor built in html, css, and javascript.
+					.contribute
+						h2 How to contribute
+						p Checkout the <a href="http://www.brackets.io/contribute">contribute page</a> for a list of <a href="#">issues</a> and <a href="#">veatures</a> to get started with.
+		footer
+			a(href="http://html.adobe.com") html.adobe.com
