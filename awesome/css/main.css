@@ -33,6 +33,19 @@ body > header li a {
   width: 100%;
   height: 20px;
   padding-top: 60px;
+  position: relative;
+}
+body > header li a:before {
+  content: '';
+  position: absolute;
+  background-image: url("../img/nav_sprites.svg");
+  background-repeat: no-repeat;
+  background-position: 0 top;
+  height: 56px;
+  width: 51px;
+  top: 0;
+  left: 34px;
+  display: block;
 }
 body > header li a:hover {
   color: #fff;
@@ -40,6 +53,33 @@ body > header li a:hover {
 body > header li.selected a {
   color: #fff;
   cursor: default;
+}
+body > header li.selected a:before {
+  background-position: 0 bottom;
+}
+body > header li:nth-child(2) a:before {
+  background-position: -51px top;
+  width: 54px;
+  left: 33px;
+}
+body > header li:nth-child(2).selected a:before {
+  background-position: 0 0;
+  background-image: url("../img/cordova_icons.png");
+  background-size: 100% 100%;
+}
+body > header li:nth-child(3) a:before {
+  background-position: -105px top;
+}
+body > header li:nth-child(3).selected a:before {
+  background-position: -105px bottom;
+}
+body > header li:nth-child(4) a:before {
+  background-position: -156px top;
+  width: 62px;
+  left: 29px;
+}
+body > header li:nth-child(4).selected a:before {
+  background-position: -156px bottom;
 }
 #content {
   height: 100%;

@@ -26,11 +26,46 @@ body > header
 			width 100%
 			height 20px
 			padding-top 60px
+			position relative
+			&:before
+				content ''
+				position absolute
+				background-image url('../img/nav_sprites.svg')
+				background-repeat no-repeat
+				background-position 0 top
+				height 56px
+				width 51px
+				top 0
+				left 34px
+				display block
 			&:hover
 				color #FFF
 		&.selected a
 			color #FFF
 			cursor default
+			&:before
+				background-position 0 bottom
+	li:nth-child(2)
+		a:before
+			background-position -51px top
+			width 54px
+			left 33px
+		&.selected a:before
+			background-position 0 0
+			background-image url('../img/cordova_icons.png')
+			background-size 100% 100%
+	li:nth-child(3)
+		a:before
+			background-position -105px top
+		&.selected a:before
+			background-position -105px bottom
+	li:nth-child(4)
+		a:before
+			background-position -156px top
+			width 62px
+			left 29px
+		&.selected a:before
+			background-position -156px bottom
 #content
 	height 100%
 	& > section
