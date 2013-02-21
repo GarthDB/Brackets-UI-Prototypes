@@ -1,3 +1,10 @@
+a {
+  color: #1d7094;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 body,
 html {
   height: 100%;
@@ -49,6 +56,7 @@ body > header li a:before {
 }
 body > header li a:hover {
   color: #fff;
+  text-decoration: none;
 }
 body > header li.selected a {
   color: #fff;
@@ -87,10 +95,43 @@ body > header li:nth-child(4).selected a:before {
 #content > section {
   height: 100%;
   box-sizing: border-box;
-  padding-top: 300px;
-  width: 800px;
+  padding: 400px 0 0 227px;
+  width: 600px;
   position: relative;
   margin: 0 auto;
+}
+#content > section aside {
+  position: absolute;
+  left: 84px;
+}
+#content > section h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+#content > section li {
+  list-style: none;
+  display: inline-block;
+}
+#content > section li:first-child {
+  margin-right: 25px;
+}
+#content > section li a {
+  font-size: 18px;
+}
+#content > section .description {
+  margin: 30px 0 50px;
+  width: 307px;
+}
+#content > section .contribute h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+#content > section .contribute p {
+  width: 307px;
+}
+#content > section article {
+  padding-top: 30px;
 }
 body > footer {
   height: 28px;
@@ -105,4 +146,7 @@ body > footer a {
   color: #7495c0;
   font-size: 18px;
   text-decoration: none;
+}
+body > footer a:hover {
+  text-decoration: underline;
 }

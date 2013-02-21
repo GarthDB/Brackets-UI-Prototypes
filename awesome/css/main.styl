@@ -1,3 +1,8 @@
+a
+	color #1d7094
+	text-decoration none
+	&:hover
+		text-decoration underline
 body, html
 	height 100%
 body
@@ -40,6 +45,7 @@ body > header
 				display block
 			&:hover
 				color #FFF
+				text-decoration none
 		&.selected a
 			color #FFF
 			cursor default
@@ -71,10 +77,35 @@ body > header
 	& > section
 		height 100%
 		box-sizing border-box
-		padding-top 300px
-		width 800px
+		padding 400px 0 0 227px
+		width 600px
 		position relative
 		margin 0 auto
+		aside
+			position absolute
+			left 84px
+		h1
+			font-size 48px
+			font-weight 700
+		li
+			list-style none
+			display inline-block
+			&:first-child
+				margin-right 25px
+			a
+				font-size 18px
+		.description
+			margin 30px 0 50px
+			width 307px
+		.contribute
+			h2
+				font-size 24px
+				font-weight 600
+				margin-bottom 20px
+			p
+				width 307px
+		article
+			padding-top 30px
 body > footer
 	height 28px
 	width 100%
@@ -87,3 +118,5 @@ body > footer
 		color #7495c0
 		font-size 18px
 		text-decoration none
+		&:hover
+			text-decoration underline
