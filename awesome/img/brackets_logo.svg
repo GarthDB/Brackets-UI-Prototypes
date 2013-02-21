@@ -1,0 +1,32 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128">
+	<defs>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="64" y1="12" x2="64" y2="102.0005">
+			<stop  offset="0" style="stop-color:#29ABE2"/>
+			<stop  offset="0.4757" style="stop-color:#28A9E1"/>
+			<stop  offset="0.6639" style="stop-color:#23A2DC"/>
+			<stop  offset="0.8012" style="stop-color:#1A96D4"/>
+			<stop  offset="0.913" style="stop-color:#0E85C9"/>
+			<stop  offset="1" style="stop-color:#0071BC"/>
+		</linearGradient>
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="64" y1="12" x2="64" y2="102.0005">
+			<stop  offset="0" style="stop-color:#29ABE2"/>
+			<stop  offset="0.4757" style="stop-color:#28A9E1"/>
+			<stop  offset="0.6639" style="stop-color:#23A2DC"/>
+			<stop  offset="0.8012" style="stop-color:#1A96D4"/>
+			<stop  offset="0.913" style="stop-color:#0E85C9"/>
+			<stop  offset="1" style="stop-color:#0071BC"/>
+		</linearGradient>
+		<filter id="shadow">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+		</filter>
+	</defs>
+	<path d="M94,12H34c-11,0-20,9-20,20v60c0,11,9,20,20,20h60c11,0,20-9,20-20V32C114,21,105,12,94,12L94,12z"/>
+	<path fill="#FFFFFF" d="M94,12H34c-11,0-20,9-20,20v60c0,11,9,20,20,20h60c11,0,20-9,20-20V32C114,21,105,12,94,12L94,12z"/>
+	<path fill="url(#SVGID_1_)" d="M94,23c4.963,0,9,4.037,9,9v50c0,4.963-4.037,9-9,9H34c-4.963,0-9-4.037-9-9V32c0-4.963,4.037-9,9-9
+		H94 M94,12H34c-11,0-20,9-20,20v50c0,11,9,20,20,20h60c11,0,20-9,20-20V32C114,21,105,12,94,12L94,12z"/>
+	<path fill="url(#SVGID_2_)" d="M94,23c4.963,0,9,4.037,9,9v50c0,4.963-4.037,9-9,9H34c-4.963,0-9-4.037-9-9V32c0-4.963,4.037-9,9-9
+		H94 M94,12H34c-11,0-20,9-20,20v50c0,11,9,20,20,20h60c11,0,20-9,20-20V32C114,21,105,12,94,12L94,12z"/>
+	<path d="M61,33v11H47v25h14v12H36V33H61z M92,33v48H67V69h14V44H67V33H92z"/>
+	<path fill="#4D4D4D" d="M61,33v11H47v25h14v12H36V33H61z M92,33v48H67V69h14V44H67V33H92z"/>
+	<path fill="#115A91" d="M94,102H34c-11,0-20-9-20-20v10c0,11,9,20,20,20h60c11,0,20-9,20-20V82C114,93,105,102,94,102z"/>
+</svg>
